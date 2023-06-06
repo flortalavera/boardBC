@@ -1,0 +1,89 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+
+    .welcome-page {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../assets/images/background.png');
+        background-size: cover;
+        border: none;
+        outline: none;
+
+        .logo {
+            padding-left: 5rem;
+
+            img {
+                width: 60%;
+            }
+
+            .welcome-text,
+            p,
+            label {
+                color: #fff;
+
+            }
+
+            .options-buttons {
+
+                button {
+                    width: 9rem;
+                    height: 2.3rem;
+                    border: none;
+                    border-radius: 5px;
+                    font-weight: 700;
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
+                    margin-top: 1rem;
+                }
+
+                .entry-button {
+                    margin-right: 1rem;
+                }
+
+                .register {
+                    display: inline-block;
+
+                    .register-button {
+                        margin-right: 1rem;
+                        background-color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+                    }
+                }
+            }
+
+            .other-options {
+                margin-top: 2rem;
+                display: flex;
+
+                .checkbox {
+                    margin-right: 5rem;
+                }
+
+                .checkbox input[type="checkbox"] {
+                    border: #fff;
+                    transform: scale(1.8);
+                    margin-right: 1rem;
+                }
+
+                .help {
+                    text-align: center;
+                }
+            }
+        }
+
+        .imagen-moves {
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+}
