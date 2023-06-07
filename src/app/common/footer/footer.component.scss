@@ -1,0 +1,29 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+.footer {
+    height: 10vh;
+    background-color: map-get(variables.$color-palette-billcentrix, 'navy');
+    background-image: url('../../../assets/images/GRID.png');
+    background-size: 70%;
+
+    .grid-overlay {
+        display: flex;
+        padding: 0 5rem;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 42, 82, 0.762);
+
+        p{
+            color: #fff;
+        }
+
+        .by-billcentrix p{
+            color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+        }
+    }
+}
