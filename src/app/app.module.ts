@@ -15,6 +15,7 @@ import { LoginOnboardComponent } from './login-onboard/login-onboard.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { MenuComponent } from './common/menu/menu.component';
 import { PreferencesComponent } from './account-settings/preferences/preferences.component';
+import { PlansComponent } from './account-settings/plans/plans.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PreferencesComponent } from './account-settings/preferences/preferences
     LoginOnboardComponent,
     AccountSettingsComponent,
     MenuComponent,
-    PreferencesComponent
+    PreferencesComponent,
+    PlansComponent
   ],
   imports: [
     BrowserModule,

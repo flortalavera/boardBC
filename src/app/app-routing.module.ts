@@ -4,12 +4,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginOnboardComponent } from './login-onboard/login-onboard.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PreferencesComponent } from './account-settings/preferences/preferences.component';
+import { PlansComponent } from './account-settings/plans/plans.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
   { path: "login", component: LoginOnboardComponent },
   { path: "settings", component: AccountSettingsComponent },
-  { path: "preferences", component: PreferencesComponent}
+  { path: "preferences", component: PreferencesComponent},
+  { path: "plans", component: PlansComponent }
 ];
 
 @NgModule({
