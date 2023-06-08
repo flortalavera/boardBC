@@ -1,22 +1,31 @@
-<div class="menu">
-    <mat-menu>
-        <button mat-menu-item><img src="../../assets/icons/preferencias.png" alt="preferencias">
-            <p>Preferencias</p>
-        </button>
-        <button mat-menu-item><img src="../../assets/icons/etiqueta.png" alt="planes">
-            <p>Planes</p>
-        </button>
-        <button mat-menu-item><img src="../../assets/icons/cuadra-white.png" alt="portales">
-            <p>Portales</p>
-        </button>
-        <button mat-menu-item><img src="../../assets/icons/grafico.png" alt="reportes">
-            <p>Reportes</p>
-        </button>
-        <button mat-menu-item><img src="../../assets/icons/informacion.png" alt="FAQs">
-            <p>FAQs</p>
-        </button>
-        <button mat-menu-item><img src="../../assets/icons/salida.png" alt="salir">
-            <p>Salir</p>
-        </button>
-    </mat-menu>
-</div>
+<button mat-icon-button [matMenuTriggerFor]="menu" class="transparent" (click)="rotateIcon()" (menuClosed)="resetIcon()">
+    <img src="../../assets/icons/menu-hamb.png" alt="menu hamburguesa" [ngClass]="{'rotate-left': isIconRotated}">
+</button>
+
+<mat-menu #menu="matMenu" class="menu">
+    <!-- Contenido del menú -->
+    <button mat-menu-item>
+        <img src="../../assets/icons/preferencias.png" alt="preferencias">
+        <span>Preferencias</span>
+    </button>
+    <button mat-menu-item>
+        <img src="../../assets/icons/etiqueta.png" alt="planes">
+        <span>Planes</span>
+    </button>
+    <button mat-menu-item>
+        <img src="../../assets/icons/cuadra-white.png" alt="portales">
+        <span>Portales</span>
+    </button>
+    <button mat-menu-item>
+        <img src="../../assets/icons/grafico.png" alt="reportes">
+        <span>Reportes</span>
+    </button>
+    <button mat-menu-item>
+        <img src="../../assets/icons/informacion.png" alt="FAQs">
+        <span>FAQs</span>
+    </button>
+    <button mat-menu-item>
+        <img src="../../assets/icons/salida.png" alt="salir">
+        <span>Salir</span>
+    </button>
+</mat-menu>

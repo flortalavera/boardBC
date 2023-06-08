@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginOnboardComponent } from './login-onboard/login-onboard.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { MenuComponent } from './common/menu/menu.component';
+import { PreferencesComponent } from './account-settings/preferences/preferences.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MenuComponent } from './common/menu/menu.component';
     LoginComponent,
     LoginOnboardComponent,
     AccountSettingsComponent,
-    MenuComponent
+    MenuComponent,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,

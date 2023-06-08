@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  isIconRotated: boolean = false;
+
+  rotateIcon() {
+    this.isIconRotated = !this.isIconRotated;
+  }
+  
+  resetIcon() {
+    this.isIconRotated = false;
+  }
 
 }

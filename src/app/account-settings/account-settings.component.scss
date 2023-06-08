@@ -35,7 +35,6 @@ body {
 
         .buttons {
             display: flex;
-            align-items: center;
             width: 30%;
             justify-content: space-between;
 
@@ -44,8 +43,8 @@ body {
                 color: map-get(variables.$color-palette-billcentrix, 'navy');
             }
 
-            .menu {
-                display: none;
+            img {
+                width: 4rem;
             }
         }
     }
@@ -82,7 +81,6 @@ body {
             margin-bottom: 1rem;
 
             h1 {
-                width: 100%;
                 font-weight: 300;
                 color: map-get(variables.$color-palette-billcentrix, 'primary');
             }
