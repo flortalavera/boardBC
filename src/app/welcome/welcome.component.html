@@ -1,7 +1,12 @@
 <body>
-    <app-navbar></app-navbar>
+    <nav>
+        <a href="#" id="login-link" (click)="onLoginClick()">
+            <p>Login</p>
+        </a>
+        <img src="../../../assets/icons/TOP_MENU.png" alt="menu hamburguesa">
+    </nav>
     <div class="welcome-page">
-        <div class="logo">
+        <div class="logo" *ngIf="showWelcomeComponent">
             <img src="../../assets/images/BRAND.png" alt="logo de Billcentrix">
             <div class="welcome-text">
                 <h1>Afiliación web</h1>
@@ -28,10 +33,10 @@
                 </div>
             </div>
         </div>
-        <div class="imagen-moves">
+        <div class="imagen-moves" alt="imagen movediza del fondo" *ngIf="showWelcomeComponent">
             <img src="../../assets/images/grafica.png" alt="imagen movediza del fondo">
         </div>
-
+        <app-login *ngIf="!showWelcomeComponent"></app-login>
     </div>
     <app-footer></app-footer>
 </body>

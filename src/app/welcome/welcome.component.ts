@@ -4,7 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
+
 })
 export class WelcomeComponent {
+  showWelcomeComponent: boolean = true;
 
+  onLoginClick() {
+
+    this.showWelcomeComponent = false;
+    
+  }
+  
 }

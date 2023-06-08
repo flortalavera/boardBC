@@ -1,0 +1,113 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+
+.login-modal-content {
+    width: 100%;
+    display: grid;
+    grid-template-areas: '1 2 3';
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+
+        img{
+            width: 90%;
+        }
+
+        h1 {
+            color: #fff;
+            font-weight: 300;
+            margin: 3rem 3rem 15rem 6rem;
+        }
+
+    }
+
+    .modal-login {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        button {
+            width: 9rem;
+            height: 2.3rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
+        }
+
+        .background-white {
+            border-radius: 15px;
+            padding: 1.5rem 3rem;
+            background-color: #fff;
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+            h1{
+                margin-bottom: 1rem;
+                font-weight: 400;
+            }
+
+            h1,
+            a {
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+
+            button {
+                color: #fff;
+                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+
+            input[type="text"] {
+                width: 100%;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+                padding: 0.5rem;
+                display: block;
+                border: none;
+                background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+            }
+
+            ::placeholder {
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                ;
+                opacity: 1;
+            }
+
+            :-ms-input-placeholder {
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                ;
+            }
+
+            ::-ms-input-placeholder {
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                ;
+            }
+
+            .options {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+
+        .transparent-background {
+            padding: 1.5rem 3rem;
+            color: #fff;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            p {
+                margin-right: 1rem;
+            }
+
+            button {
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+        }
+    }
+}
