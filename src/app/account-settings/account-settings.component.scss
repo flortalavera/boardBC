@@ -1,0 +1,229 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+
+body {
+    background-color: map-get(variables.$color-palette-billcentrix, 'navy');
+    background-image: url('../../assets/images/GRID.png');
+    background-size: 70%;
+    height: max-content;
+
+    .grid-overlay {
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 42, 82, 0.762);
+    }
+
+    button{
+        margin-top: 2rem;
+        width: 12rem;
+        height: 2.3rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            img {
+                width: 50%;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            width: 30%;
+            justify-content: space-between;
+
+            button {
+                background-color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+
+    .setting-data {
+        margin-top: 1rem;
+        padding: 3rem;
+        border-radius: 10px;
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+        .second-headboard {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+
+            h1 {
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            img {
+                width: 20rem;
+            }
+        }
+
+        .general-data,
+        .processing-account,
+        .notifications {
+            background-color: #fff;
+            padding: 1.5rem 2.3rem;
+            border-radius: 10px;
+            box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+            margin-bottom: 1rem;
+
+            h1 {
+                width: 100%;
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+
+            .grid {
+                display: grid;
+                grid-template-areas: 'left right';
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+                gap: 3rem;
+                grid-template-columns: 1fr 1fr;
+
+                .items {
+                    margin: 1rem 0;
+                    position: relative;
+
+                    .select-wrapper {
+                        display: flex;
+                        align-items: center;
+
+                        select {
+                            padding-right: 4rem;
+                            /* Añadimos espacio para el icono */
+                        }
+
+                        .arrow {
+                            position: absolute;
+                            right: 3rem;
+                            /* Ajusta el espacio entre el select y el icono */
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 16px;
+                            height: 16px;
+                            display: block;
+                            border-left: 4px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                            border-bottom: 4px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                            transform: rotate(-45deg);
+                            /* Giramos el cuadrado */
+                            transition: all 0.25s ease;
+                        }
+                    }
+
+                    label {
+                        margin: 1rem 0;
+                    }
+
+                    input {
+                        display: block;
+                    }
+
+                    input[type="text"],
+                    select {
+                        width: 100%;
+                        border-radius: 5px;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        padding: 0.5rem;
+                        border: none;
+                        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+                    }
+
+                    select {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        cursor: pointer;
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        position: relative;
+                    }
+
+                    ::placeholder {
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        opacity: 1;
+                    }
+
+                    :-ms-input-placeholder {
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    }
+
+                    ::-ms-input-placeholder {
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    }
+
+                    a {
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        text-decoration: underline;
+                    }
+
+                    .elements-separed {
+                        display: flex;
+                        justify-content: space-between;
+
+                        label {
+                            margin: 0;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        .processing-account .right {
+            .flex-style{
+                display: flex;
+                align-items: center;
+
+                label {
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    margin-right: 2rem;
+                }
+    
+                .custom-account-btn {
+                    color: #fff;
+                    width: 15rem;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                }
+
+            }
+
+        }
+
+    }
+
+    .options-buttons{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+
+        button{
+            width: 8rem;
+        }
+
+        .back-btn{
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
+
+        .continue-btn{
+            color: #fff;
+            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
+    }
+}

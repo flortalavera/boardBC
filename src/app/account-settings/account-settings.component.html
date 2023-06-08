@@ -1,0 +1,124 @@
+<body>
+    <div class="grid-overlay">
+        <div class="header">
+            <div class="logo">
+                <img src="../../assets/images/BRAND2.png" alt="logo de Billcentrix">
+            </div>
+            <div class="buttons">
+                <button>Crear nuevo portal</button>
+                <img src="../../assets/icons/TOP_MENU.png" alt="menu hamburguesa" (click)="toggleMenu()">
+                <app-menu *ngIf="showMenu" class="menu"></app-menu>
+            </div>
+        </div>
+        <div class="setting-data">
+            <div class="second-headboard">
+                <h1>Configuración de la cuenta</h1>
+                <img src="../../assets/icons/1234.png" alt="logo de Billcentrix">
+            </div>
+            <div class="general-data">
+                <h1>Datos generales</h1>
+                <div class="grid">
+                    <div class="left">
+                        <div class="items">
+                            <label for="name">Nombre de la compañía*</label>
+                            <input type="text" placeholder="Corporacion o sosciedad constituída">
+                        </div>
+                        <div class="items">
+                            <label for="country">País*</label>
+                            <div class="select-wrapper">
+                                <select id="country">
+                                    <option value="" disabled selected hidden>Seleccione</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </div>
+                        </div>                        
+                        <div class="items">
+                            <label for="phone">Teléfono*</label>
+                            <input type="text" placeholder="(000) 000-0000">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="items">
+                            <label for="address">Dirección*</label>
+                            <input type="text" placeholder="Escriba aquí la dirección física de su negocio">
+                        </div>
+                        <div class="items">
+                            <label for="country">Ciudad*</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option value="" disabled selected hidden>Seleccione</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="elements-separed">
+                                <label for="phone">Nombre del portal*</label><a href="#">Habilitar dominio personalizado</a>
+                            </div>
+                            <input type="text" placeholder="¿Cómo se llama tu negocio?">
+                        </div>
+                        <p>Este nombre también será usado para crear el sub-dominio de su portal y se puede editar en cualquier momento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="processing-account">
+                <h1>Cuenta de Procesamiento</h1>
+                <div class="grid">
+                    <div class="left">
+                        <div class="items">
+                            <label for="country">Seleccione</label>
+                            <div class="select-wrapper">
+                                <select id="country">
+                                    <option value="" disabled selected hidden>Cuenta DEMO</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="items">
+                            <p>Esta será la cuenta dedicada para procesar los pagos</p>
+                            <div class="flex-style">
+                                <label for="">Abre tu nueva cuenta aquí</label>
+                                <button class="custom-account-btn">Cuenta personalizada</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications">
+                <h1>Notificaciones</h1>
+                <div class="grid">
+                    <div class="left">
+                        <div class="items">
+                            <div class="elements-separed">
+                                <label for="phone">Número de Whatsapp*</label><a href="#">Número personalizado</a>
+                            </div>
+                            <div class="select-wrapper">
+                                <select id="country">
+                                    <option value="" disabled selected hidden>Seleccione una opción</option>
+                                </select>
+                                <i class="arrow"></i>
+                            </div>
+                        </div>
+                        <p>En caso de requerir habilitar un número de WhatsApp personalizado, por favor seleccione la opción "Número personalizado" y el personal autorizado estará comunicándose con usted.</p>
+                    </div>
+                    <div class="right">
+                        <div class="items">
+                            <div class="elements-separed">
+                                <label for="phone">Correo electrónico*</label><a href="#">Habilitar correo personalizado</a>
+                            </div>
+                            <input type="text" placeholder="info@billcentrix.com">
+                        </div>
+                        <p>Las comunicaciones a sus clientes estarán siendo enviadas mediante el correo: <strong>info@billcentrix.com</strong>. En caso de requerir habilitar un correo personalizado por favor selecciona "Habilitar correo personalizado" y el personal autorizado estará comunicándose con usted.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="options-buttons">
+            <button class="back-btn">Atrás</button>
+            <button class="continue-btn">Continuar</button>
+        </div>
+    </div>
+</body>

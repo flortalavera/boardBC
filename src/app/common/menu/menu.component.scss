@@ -1,0 +1,10 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+.menu{
+    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+    p{
+        color: #fff;
+    }
+}
