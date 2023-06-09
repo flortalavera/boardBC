@@ -1,0 +1,79 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+.preview{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .see-photo {
+        width: 70%;
+        height: 8rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        border: none;
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        h1{
+            font-weight: 300;
+        }
+
+    }
+
+    h1, h3, .big-number {
+        color: map-get(variables.$color-palette-billcentrix, 'primary');
+    }
+
+    .big-number {
+        font-size: 6rem;
+        font-weight: 500;
+    }
+
+    .including {
+        padding: 2rem;
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+
+        .dotted-list li::before {
+            content: "\2022";
+            margin-right: 5px;
+        }
+    }
+
+    .options{
+        display: flex;
+        width: 100%;
+
+        button{
+            border: none;
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+            background-color: transparent;
+
+            img{
+                width: 3.8rem;
+            }
+        }
+    }
+}

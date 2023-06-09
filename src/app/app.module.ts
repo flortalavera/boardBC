@@ -16,6 +16,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { MenuComponent } from './common/menu/menu.component';
 import { PreferencesComponent } from './account-settings/preferences/preferences.component';
 import { PlansComponent } from './account-settings/plans/plans.component';
+import { PlanComponent } from './templates/plan/plan.component';
+import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PlansComponent } from './account-settings/plans/plans.component';
     AccountSettingsComponent,
     MenuComponent,
     PreferencesComponent,
-    PlansComponent
+    PlansComponent,
+    PlanComponent,
+    MyPlansComponent
   ],
   imports: [
     BrowserModule,

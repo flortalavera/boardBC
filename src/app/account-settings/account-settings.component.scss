@@ -153,7 +153,6 @@ body {
 
                     ::placeholder {
                         color: map-get(variables.$color-palette-billcentrix, 'primary');
-                        opacity: 1;
                     }
 
                     :-ms-input-placeholder {
