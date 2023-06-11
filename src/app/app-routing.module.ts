@@ -6,6 +6,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PreferencesComponent } from './account-settings/preferences/preferences.component';
 import { PlansComponent } from './account-settings/plans/plans.component';
 import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.component';
+import { PortalComponent } from './account-settings/portal/portal.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: "settings", component: AccountSettingsComponent },
   { path: "preferences", component: PreferencesComponent},
   { path: "plans", component: PlansComponent },
-  { path: "my-plans", component: MyPlansComponent}
+  { path: "my-plans", component: MyPlansComponent},
+  { path: "portal", component: PortalComponent }
 ];
 
 @NgModule({

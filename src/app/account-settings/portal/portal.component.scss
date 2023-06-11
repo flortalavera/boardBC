@@ -1,0 +1,210 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+body {
+    background-color: map-get(variables.$color-palette-billcentrix, 'navy');
+    background-image: url('../../../assets/images/GRID.png');
+    background-size: 70%;
+    height: max-content;
+
+    .grid-overlay {
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 42, 82, 0.762);
+    }
+
+    button {
+        margin-top: 1rem;
+        width: 12rem;
+        height: 2.3rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            img {
+                width: 50%;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+
+            button {
+                background-color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            img {
+                width: 4rem;
+            }
+        }
+    }
+
+    .create-portal {
+        margin-top: 1rem;
+        padding: 3rem;
+        border-radius: 10px;
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+        .second-headboard {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            h1 {
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            img {
+                width: 20rem;
+                margin-right: 7rem;
+            }
+        }
+
+        .portal-info {
+            background-color: #fff;
+            padding: 1.5rem 2.3rem;
+            border-radius: 10px;
+            box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+            margin-bottom: 1rem;
+
+            h1 {
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+
+            p {
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+                text-align: center;
+                gap: 1rem;
+
+                .essential,
+                .practical,
+                .contemporary {
+                    margin-top: 1rem;
+                    padding: 3rem;
+                    width: 90%;
+                    border-radius: 10px;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+
+                    .preview {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-top: 2rem;
+
+                        .preview-text {
+                            display: flex;
+                            align-items: center;
+
+                            p {
+                                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                                padding: 0;
+                                margin-left: 1rem;
+                            }
+
+                            img {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                        }
+
+
+                        .round-checkbox input[type="checkbox"] {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                            outline: none;
+                            cursor: pointer;
+                            position: relative;
+                        }
+
+                        .round-checkbox input[type="checkbox"]:checked::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 8px;
+                            height: 8px;
+                            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                            border-radius: 50%;
+                        }
+
+                    }
+
+                }
+
+                p {
+                    padding: 1rem;
+                }
+
+
+                .practical::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 0.5px;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    left: -2rem;
+                }
+
+                .practical::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    right: -2rem;
+                }
+
+            }
+        }
+    }
+
+    .options-buttons{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+
+        button{
+            width: 8rem;
+        }
+
+        .back-btn{
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
+
+        .continue-btn{
+            color: #fff;
+            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
+    }
+}
