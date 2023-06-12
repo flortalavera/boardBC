@@ -1,0 +1,116 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+body {
+    background-color: map-get(variables.$color-palette-billcentrix, 'navy');
+    background-image: url('../../../assets/images/GRID.png');
+    background-size: 70%;
+    height: max-content;
+
+    .grid-overlay {
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 42, 82, 0.762);
+    }
+
+    button {
+        margin-top: 1rem;
+        width: 12rem;
+        height: 2.3rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            img {
+                width: 50%;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+
+            button {
+                background-color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            img {
+                width: 4rem;
+            }
+        }
+    }
+
+    .personalize-content {
+        margin-top: 1rem;
+        padding: 3rem;
+        border-radius: 10px;
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+        .second-headboard {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            h1 {
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            img {
+                width: 20rem;
+                margin-right: 7rem;
+            }
+        }
+
+        .grid {
+
+            .selected-theme,
+            .color-palette,
+            .brand,
+            .main-image,
+            .promotional-banner,
+            .general-data {
+                background-color: #fff;
+                padding: 1.5rem 2.3rem;
+                border-radius: 10px;
+                box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+                margin-bottom: 1rem;
+
+                h1 {
+                    font-weight: 300;
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                }
+
+                p {
+                    color: map-get(variables.$color-palette-billcentrix, 'navy');
+                }
+            }
+
+
+            .selected-theme {
+
+                .change-btn{
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+
+                    button {
+                        color: #fff;
+                        background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    }
+                }
+
+            }
+        }
+    }
+}

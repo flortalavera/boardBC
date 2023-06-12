@@ -20,6 +20,8 @@ import { PlanComponent } from './templates/plan/plan.component';
 import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.component';
 import { PortalComponent } from './account-settings/portal/portal.component';
 import { MyPortalComponent } from './templates/my-portal/my-portal.component';
+import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
+import { PersonalizeComponent } from './account-settings/personalize/personalize.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { MyPortalComponent } from './templates/my-portal/my-portal.component';
     PlanComponent,
     MyPlansComponent,
     PortalComponent,
-    MyPortalComponent
+    MyPortalComponent,
+    MyPortalsComponent,
+    PersonalizeComponent
   ],
   imports: [
     BrowserModule,

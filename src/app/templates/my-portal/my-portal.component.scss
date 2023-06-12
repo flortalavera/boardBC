@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: left;
 
     .header{
         width: 100%;
@@ -27,26 +28,52 @@
             color: map-get(variables.$color-palette-billcentrix, 'primary');
         }
 
+        img{
+            height: 2rem;
+        }
+
+    }
+
+    p{
+        width: 90%;
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+        margin-bottom: 1rem;
     }
 
     .content-portal{
-        height: 15rem;
-        width: 20rem;
+        height: 20rem;
+        border-radius: 10px;
+        width: 23rem;
         background-color: map-get(variables.$color-palette-billcentrix, 'gray');
     }
 
     .options{
         display: flex;
         width: 100%;
+        align-items: baseline;
+        justify-content: space-around;
+
+        p{
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
 
         button{
             border: none;
-            color: map-get(variables.$color-palette-billcentrix, 'primary');
             background-color: transparent;
 
             img{
                 width: 3.8rem;
             }
+        }
+
+        .post-btn{
+            color: #fff;
+            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+            width: 10rem;
+            height: 2.3rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
         }
     }
 }
