@@ -8,7 +8,7 @@ import { PlansComponent } from './account-settings/plans/plans.component';
 import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.component';
 import { PortalComponent } from './account-settings/portal/portal.component';
 import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
-import { PersonalizeComponent } from './account-settings/personalize/personalize.component';
+import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: "my-plans", component: MyPlansComponent},
   { path: "portal", component: PortalComponent },
   { path: "my-portals", component: MyPortalsComponent },
-  { path: "personalize", component: PersonalizeComponent}
+  { path: "personalize", component: PortalCustomizationComponent}
 ];
 
 @NgModule({

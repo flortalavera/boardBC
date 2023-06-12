@@ -85,10 +85,10 @@ body {
                 border-radius: 10px;
                 box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
                 margin-bottom: 1rem;
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
 
                 h1 {
                     font-weight: 300;
-                    color: map-get(variables.$color-palette-billcentrix, 'primary');
                 }
 
                 p {
@@ -102,12 +102,74 @@ body {
                 .change-btn{
                     width: 100%;
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
 
                     button {
                         color: #fff;
                         background-color: map-get(variables.$color-palette-billcentrix, 'primary');
                     }
+                }
+
+            }
+
+            .color-palette{
+
+                .color-palette-content{
+                    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                    width: fit-content;
+                    padding: 1rem;
+                    margin-top: 1rem;
+                    border-radius: 10px;
+
+                    .preview{
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-top: 2rem;
+
+                        .preview-text {
+                            display: flex;
+                            align-items: center;
+        
+                            p {
+                                padding: 0;
+                                margin-left: 1rem;
+                                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                            }
+        
+                            img {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                        }
+        
+        
+                        .round-checkbox input[type="checkbox"] {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                            outline: none;
+                            cursor: pointer;
+                            position: relative;
+                        }
+        
+                        .round-checkbox input[type="checkbox"]:checked::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 8px;
+                            height: 8px;
+                            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                            border-radius: 50%;
+                        }
+                    }
+
                 }
 
             }

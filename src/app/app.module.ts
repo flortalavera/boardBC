@@ -21,7 +21,7 @@ import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.com
 import { PortalComponent } from './account-settings/portal/portal.component';
 import { MyPortalComponent } from './templates/my-portal/my-portal.component';
 import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
-import { PersonalizeComponent } from './account-settings/personalize/personalize.component';
+import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,7 @@ import { PersonalizeComponent } from './account-settings/personalize/personalize
     PortalComponent,
     MyPortalComponent,
     MyPortalsComponent,
-    PersonalizeComponent
+    PortalCustomizationComponent
   ],
   imports: [
     BrowserModule,
