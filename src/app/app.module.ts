@@ -16,10 +16,10 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { MenuComponent } from './common/menu/menu.component';
 import { PreferencesComponent } from './account-settings/preferences/preferences.component';
 import { PlansComponent } from './account-settings/plans/plans.component';
-import { PlanComponent } from './templates/plan/plan.component';
+import { PlanComponent } from './partials/plan/plan.component';
 import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.component';
 import { PortalComponent } from './account-settings/portal/portal.component';
-import { MyPortalComponent } from './templates/my-portal/my-portal.component';
+import { MyPortalComponent } from './partials/my-portal/my-portal.component';
 import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
 import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
 
