@@ -1,5 +1,7 @@
 @use '../design-system/_reset';
 @use '../design-system/_variables';
+@use '../design-system/_base';
+
 
 .login-modal-content {
     width: 100%;
@@ -68,22 +70,6 @@
                 border: none;
                 background-color: map-get(variables.$color-palette-billcentrix, 'gray');
                 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
-            }
-
-            ::placeholder {
-                color: map-get(variables.$color-palette-billcentrix, 'primary');
-                ;
-                opacity: 1;
-            }
-
-            :-ms-input-placeholder {
-                color: map-get(variables.$color-palette-billcentrix, 'primary');
-                ;
-            }
-
-            ::-ms-input-placeholder {
-                color: map-get(variables.$color-palette-billcentrix, 'primary');
-                ;
             }
 
             .options {

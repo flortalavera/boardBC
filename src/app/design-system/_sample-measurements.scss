@@ -1,0 +1,32 @@
+@import 'variables';
+
+.sample-measurements {
+    margin-top: 1rem;
+    background-color: map-get($color-palette-billcentrix, 'primary');
+    position: relative;
+
+    .line-horizontal,
+    .line-vertical {
+        position: absolute;
+        background-color: #fff;
+        top: 1rem;
+    }
+
+    .line-text-horizontal {
+        position: absolute;
+        top: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+
+    .line-text-vertical {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        writing-mode: vertical-lr;
+        color: #fff;
+        white-space: nowrap;
+    }
+}
