@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { BasicComponent } from 'src/app/plans-preview/basic/basic.component';
+import { Overlay } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-portal-customization',
@@ -8,6 +11,10 @@ import { Component } from '@angular/core';
 export class PortalCustomizationComponent {
   palettes: any[] = [];
   currentIndex: number = 0;
+
+  constructor(
+    private dialog: MatDialog,
+    private overlay: Overlay) { }
 
   ngOnInit() {
     // Aquí debes llenar el arreglo 'paletas' con las paletas de colores que tienes disponibles
@@ -33,7 +40,7 @@ export class PortalCustomizationComponent {
       this.currentIndex = 0;
     }
   }
-  
+
   next() {
     const lastIndex = this.currentIndex + 3;
     if (lastIndex < this.palettes.length) {
@@ -43,4 +50,16 @@ export class PortalCustomizationComponent {
     }
   }
 
+  openModal(): void {
+    const dialogRef: MatDialogRef<BasicComponent> = this.dialog.open<BasicComponent, any, any>(BasicComponent, {
+      // Configuración adicional del modal (ancho, altura, etc.)
+      width: '90%',
+      height: '90%',
+      scrollStrategy: this.overlay.scrollStrategies.reposition()
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // Lógica después de que el modal se haya cerrado (si es necesario)
+    });
+  }
 }

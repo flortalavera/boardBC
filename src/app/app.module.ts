@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Angular Material */
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ import { PortalComponent } from './account-settings/portal/portal.component';
 import { MyPortalComponent } from './partials/my-portal/my-portal.component';
 import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
 import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
+import { BasicComponent } from './plans-preview/basic/basic.component';
+import { PlanBasicComponent } from './partials/plan-basic/plan-basic.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +43,16 @@ import { PortalCustomizationComponent } from './account-settings/portal-customiz
     PortalComponent,
     MyPortalComponent,
     MyPortalsComponent,
-    PortalCustomizationComponent
+    PortalCustomizationComponent,
+    BasicComponent,
+    PlanBasicComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

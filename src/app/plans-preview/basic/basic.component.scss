@@ -1,0 +1,61 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+body{
+    height: max-content;
+    width: 160vh;
+    padding: 1rem;
+
+    .header{
+        display: inline-flex;
+        justify-content: flex-end;
+        width: 100%;
+        color: map-get(variables.$color-palette-billcentrix, 'primary');
+        align-items: center;
+
+        p{
+            padding: 0 1rem 0 0.4rem;
+        }
+        
+        .close{
+            width: 0.7rem;
+            height: 0.9rem;
+        }
+    }
+
+    .main-content{
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
+        left: 0;
+        right: 0;
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+        h3{
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+            font-weight: 500;
+            padding: 1rem 0;
+        }
+
+        .main-image{
+            position: absolute;
+            padding: 3rem 2rem;
+            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+            border-radius: 5px;
+            width: 100%;
+
+            .text{
+                width: 50%;
+                h3, h1, p{
+                    color: #fff;
+                }
+                
+            }
+        }
+    }
+}
+
+app-plan-basic {
+    display: flex;
+    justify-content: space-around;
+}
