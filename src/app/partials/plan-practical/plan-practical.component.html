@@ -1,0 +1,16 @@
+<div class="preview" *ngFor="let plan of plans.option; index as i">
+    <div class="header" >
+        <button *ngIf="plans.option[i] === 'OPCIÓN 2'">Popular</button>
+        <p>{{ plans.option[i] }}</p>
+    </div>
+    <h1 class="big-number">{{ plans.price[i] }}</h1>
+    <div class="including">
+        <p>Descripción del plan, esta información se edita en el siguiente paso</p>
+    </div>
+    <div class="select">
+        <p>Seleccionar</p>
+        <div class="round-checkbox">
+            <input type="checkbox" id="myCheckbox">
+        </div>
+    </div>
+</div>

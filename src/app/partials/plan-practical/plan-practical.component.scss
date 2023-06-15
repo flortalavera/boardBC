@@ -1,0 +1,55 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+@use '../../design-system/base';
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: 2rem 1.8rem;
+    border: none;
+    background-color: #fff;
+    justify-content: center;
+    border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+    align-items: flex-start;
+    text-align: left;
+
+    .header {
+        padding-bottom: 3rem;
+
+        button{
+            color: #fff;
+            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+            width: 7rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .big-number {
+        font-size: map-get(variables.$font-sizes, 'big-title');
+        padding-bottom: 1rem;
+    }
+
+    .including {
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+        padding-bottom: 3rem;
+
+        p {
+            font-weight: 600;
+            font-size: map-get(variables.$font-sizes, 'subtext');
+        }
+    }
+
+    .select{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        p{
+            font-weight: 500;
+        }
+    }
+}

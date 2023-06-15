@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { BasicComponent } from 'src/app/plans-preview/basic/basic.component';
 import { Overlay } from '@angular/cdk/overlay';
+import { PracticalComponent } from 'src/app/plans-preview/practical/practical.component';
 
 @Component({
   selector: 'app-portal-customization',
@@ -11,6 +12,7 @@ import { Overlay } from '@angular/cdk/overlay';
 export class PortalCustomizationComponent {
   palettes: any[] = [];
   currentIndex: number = 0;
+  dialogRef!: MatDialogRef<PracticalComponent>;
 
   constructor(
     private dialog: MatDialog,
@@ -51,15 +53,21 @@ export class PortalCustomizationComponent {
   }
 
   openModal(): void {
-    const dialogRef: MatDialogRef<BasicComponent> = this.dialog.open<BasicComponent, any, any>(BasicComponent, {
+    this.dialogRef = this.dialog.open<PracticalComponent, any, any>(PracticalComponent, {
       // Configuración adicional del modal (ancho, altura, etc.)
       width: '90%',
       height: '90%',
       scrollStrategy: this.overlay.scrollStrategies.reposition()
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    this.dialogRef.afterClosed().subscribe(result => {
       // Lógica después de que el modal se haya cerrado (si es necesario)
     });
+  }
+
+  closeModal(): void {
+    if (this.dialogRef) {
+      this.dialogRef.close();
+    }
   }
 }

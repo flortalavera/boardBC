@@ -25,6 +25,8 @@ import { MyPortalsComponent } from './account-settings/portal/my-portals/my-port
 import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
 import { BasicComponent } from './plans-preview/basic/basic.component';
 import { PlanBasicComponent } from './partials/plan-basic/plan-basic.component';
+import { PracticalComponent } from './plans-preview/practical/practical.component';
+import { PlanPracticalComponent } from './partials/plan-practical/plan-practical.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { PlanBasicComponent } from './partials/plan-basic/plan-basic.component';
     MyPortalsComponent,
     PortalCustomizationComponent,
     BasicComponent,
-    PlanBasicComponent
+    PlanBasicComponent,
+    PracticalComponent,
+    PlanPracticalComponent
   ],
   imports: [
     BrowserModule,
