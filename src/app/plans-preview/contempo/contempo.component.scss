@@ -1,0 +1,68 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+@use '../../design-system/_base';
+@use '../../design-system/base-preview';
+
+.main-content{
+    .background{
+        height: 35rem;
+        background-image: url('../../../assets/images/Slide\ Background.png');
+        background-size: 80%;
+        background-repeat: no-repeat;
+
+        .navbar{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 1rem;
+
+            .logo{
+                padding-left: 2rem;
+            }
+
+            .other-options-menu{
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        .main-image{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            .text{
+                padding: 5rem;
+
+                h1{
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    font-weight: 400;
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: map-get(variables.$font-sizes, 'big-title');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-billcentrix, 'navy');
+                    padding: 0 10rem 1rem 0;
+                }
+
+                button{
+                    width: 8rem;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    color: #fff;
+                }
+            }
+
+            .image-right{
+                img{
+                    width: 28rem;
+                }
+            }
+        }
+    }
+
+    .background2{
+        height: 30rem;
+        position: relative;
+        background-image: url('../../../assets/images/Background\ Bubble.png');
+        background-repeat: no-repeat;
+    }
+}

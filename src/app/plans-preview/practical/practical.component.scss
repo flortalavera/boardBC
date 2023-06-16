@@ -33,28 +33,6 @@ body{
         right: 0;
         background-color: map-get(variables.$color-palette-billcentrix, 'gray');
 
-        .navbar{
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-bottom: 1.7rem;
-
-            h3{
-                color: map-get(variables.$color-palette-billcentrix, 'navy');
-                font-weight: 500;
-            }
-
-            .logo{
-                display: flex;
-                align-items: center;
-
-                h3{
-                    margin-left: 1rem;
-                    color: map-get(variables.$color-palette-billcentrix, 'primary');
-                }
-            }
-        }
-
         .main-image{
             padding: 3rem 2rem;
             background-color: map-get(variables.$color-palette-billcentrix, 'primary');

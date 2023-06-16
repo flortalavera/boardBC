@@ -3,6 +3,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { BasicComponent } from 'src/app/plans-preview/basic/basic.component';
 import { Overlay } from '@angular/cdk/overlay';
 import { PracticalComponent } from 'src/app/plans-preview/practical/practical.component';
+import { ContempoComponent } from 'src/app/plans-preview/contempo/contempo.component';
 
 @Component({
   selector: 'app-portal-customization',
@@ -12,7 +13,7 @@ import { PracticalComponent } from 'src/app/plans-preview/practical/practical.co
 export class PortalCustomizationComponent {
   palettes: any[] = [];
   currentIndex: number = 0;
-  dialogRef!: MatDialogRef<PracticalComponent>;
+  dialogRef!: MatDialogRef<ContempoComponent>;
 
   constructor(
     private dialog: MatDialog,
@@ -53,7 +54,7 @@ export class PortalCustomizationComponent {
   }
 
   openModal(): void {
-    this.dialogRef = this.dialog.open<PracticalComponent, any, any>(PracticalComponent, {
+    this.dialogRef = this.dialog.open<ContempoComponent, any, any>(ContempoComponent, {
       // Configuración adicional del modal (ancho, altura, etc.)
       width: '90%',
       height: '90%',

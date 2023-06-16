@@ -27,6 +27,8 @@ import { BasicComponent } from './plans-preview/basic/basic.component';
 import { PlanBasicComponent } from './partials/plan-basic/plan-basic.component';
 import { PracticalComponent } from './plans-preview/practical/practical.component';
 import { PlanPracticalComponent } from './partials/plan-practical/plan-practical.component';
+import { ContempoComponent } from './plans-preview/contempo/contempo.component';
+import { PlanContempoComponent } from './partials/plan-contempo/plan-contempo.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { PlanPracticalComponent } from './partials/plan-practical/plan-practical
     BasicComponent,
     PlanBasicComponent,
     PracticalComponent,
-    PlanPracticalComponent
+    PlanPracticalComponent,
+    ContempoComponent,
+    PlanContempoComponent
   ],
   imports: [
     BrowserModule,
