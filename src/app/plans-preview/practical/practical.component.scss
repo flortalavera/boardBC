@@ -103,7 +103,120 @@ body{
             app-plan-practical{
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
             }
+        }
+
+        .background-banner{
+            background-color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+            margin: 1rem 3rem;
+            border-radius: 15px;
+            padding-top: 1rem;
+
+            .banner-content{
+                border-radius: 15px;
+                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                color: #fff;
+                padding: 3rem;
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: left;
+
+                    h1{
+                        font-weight: 300;
+                        margin-bottom: 1rem;
+                        font-size: map-get(variables.$font-sizes, 'title');
+                    }
+                }
+
+                .white-image{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    background-color: #fff;
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    width: 12rem;
+                    padding: 3rem;
+                    border-radius: 15px;
+                    align-items: center;
+                    height: 15rem;
+
+                    img{
+                        width: 2.2rem;
+                    }
+                }
+            }
+        }
+
+        .footer{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            padding: 1rem 3rem;
+
+            p{
+                color: map-get(variables.$color-palette-billcentrix, 'navy');
+            }
+
+            .right{
+                padding-left: 1rem;
+
+                h1{
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    font-weight: 400;
+                    margin-bottom: 0.8rem;
+                }
+            }
+
+            .left{
+                .mail{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .round-mail{
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        border-radius: 50%;
+                        background: map-get(variables.$color-palette-billcentrix, 'primary');
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 1.5rem;
+
+                        img{
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+
+                .text-footer{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 3rem;
+                }
+            }
+            
+        }
+
+    }
+
+    .options-buttons{
+        justify-content: space-around;
+        display: flex;
+
+        button{
+            width: 8rem;
+        }
+
+        .back-btn{
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.48);
         }
     }
 }
