@@ -1,1 +1,19 @@
-<p>plan-contempo works!</p>
+<div class="preview" *ngFor="let plan of plans.title; index as i">
+    <div class="header" >
+        <div class="circle" [ngClass]="{
+            'plan-1': plan === 'PLAN 1',
+            'plan-2': plan === 'PLAN 2',
+            'plan-3': plan === 'PLAN 3'
+          }">
+            <img src="{{ plans.image[i] }}" alt="imagen planes">
+        </div>
+    </div>
+    <p>{{ plans.title[i] }}</p>
+    <h1 class="big-number">{{ plans.price[i] }}</h1>
+    <div class="including">
+        <p>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis</p>
+    </div>
+    <div class="select">
+        <button>Button</button>
+    </div>
+</div>
