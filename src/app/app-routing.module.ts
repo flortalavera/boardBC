@@ -11,6 +11,7 @@ import { MyPortalsComponent } from './account-settings/portal/my-portals/my-port
 import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
 import { FAQsComponent } from './faqs/faqs.component';
 import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
+import { ReportsComponent } from './reports/reports.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: "portal", component: PortalComponent },
   { path: "my-portals", component: MyPortalsComponent },
   { path: "personalize", component: PortalCustomizationComponent},
-  { path: "faqs", component: FAQsHoversComponent }
+  { path: "faqs", component: FAQsHoversComponent },
+  { path: "reports", component: ReportsComponent}
 ];
 
 @NgModule({

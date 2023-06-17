@@ -1,0 +1,86 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+@use '../design-system/_base';
+
+.reports-data{
+    margin-top: 1rem;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+    .second-headboard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-weight: 300;
+            padding-right: 6rem;
+            color: map-get(variables.$color-palette-billcentrix, 'navy');
+        }
+
+        button{
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+            background-color: #fff;
+            margin-right: 1rem;
+            margin-top: 0;
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+        }
+    }
+
+    .content{
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+
+        .select-section{
+            display: flex;
+            justify-content: center;
+
+            .items{
+                width: 15rem;
+                margin-right: 1rem;
+
+                .select-wrapper{
+                    select{
+                        border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                    }
+                }
+            }
+        }
+
+        .results{
+            background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+            border-radius: 1rem;
+            padding: 3rem;
+
+            h1{
+                font-weight: 300;
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+            }
+
+            .item-result{
+                padding: 1.5rem 2rem;
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+                p{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem 1rem 0;
+
+    button{
+        margin-right: 2rem;
+        width: 9rem;
+        color: #fff;
+        background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+    }
+}

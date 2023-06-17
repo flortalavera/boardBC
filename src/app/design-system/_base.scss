@@ -26,6 +26,7 @@ body {
                 display: flex;
                 width: 30%;
                 justify-content: space-between;
+                align-items: center;
 
                 button {
                     background-color: map-get($color-palette-billcentrix, 'highlighter');
@@ -142,4 +143,19 @@ textarea {
 .continue-btn {
     color: #fff;
     background-color: map-get($color-palette-billcentrix, 'primary');
+}
+
+.arrow {
+    position: absolute;
+    right: 4px; /* Ajusta el espacio entre el select y el icono */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-left: 4px solid map-get($color-palette-billcentrix, 'primary');
+    border-bottom: 4px solid map-get($color-palette-billcentrix, 'primary');
+    transform: rotate(-45deg);
+    /* Giramos el cuadrado */
+    transition: all 0.25s ease;
 }
