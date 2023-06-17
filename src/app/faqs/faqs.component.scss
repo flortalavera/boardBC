@@ -1,0 +1,121 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+@use '../design-system/_base';
+
+.question-content{
+    margin-top: 1rem;
+    padding: 1.5rem 5rem;
+    border-radius: 10px;
+    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+    .main-title{
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+        padding-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    .faqs{
+        background-color: #fff;
+        padding: 1.5rem 2.3rem;
+        border-radius: 10px;
+        box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+
+        .header{
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+            padding-bottom: 1.8rem;
+
+            .title{
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 1rem;
+                }
+
+                h1{
+                    font-weight: 300;
+                    text-align: left;
+                }
+            }
+
+            img{
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+        }
+
+        .question-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+
+            .item-question{
+                h4{
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    margin-bottom: 1.5rem;
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-billcentrix, 'navy');
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+
+        .more-info{
+
+            h1{
+                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                padding-bottom: 1rem;
+                font-weight: 300;
+            }
+            .content-info{
+                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                padding: 2rem 6rem;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+            
+
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                }
+                
+                .text{
+                    padding-left: 5rem;
+
+                    h1, p{
+                        color: #ffff;
+                    }
+
+                    h1{
+                        font-size: 7rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button-option{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+
+    p{
+        color: #fff;
+    }
+
+    button{
+        background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+        color: #fff;
+        margin: 0;
+        margin-left: 1rem;
+    }
+}

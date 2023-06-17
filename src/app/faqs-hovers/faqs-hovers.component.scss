@@ -1,0 +1,341 @@
+@use '../design-system/_reset';
+@use '../design-system/_variables';
+@use '../design-system/_base';
+
+.question-content {
+    margin-top: 1rem;
+    padding: 1.5rem 5rem;
+    border-radius: 10px;
+    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+    .main-title {
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+        padding-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    .faqs {
+        background-color: #fff;
+        padding: 1.5rem 2.3rem;
+        border-radius: 10px;
+        box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+
+        .header {
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+            padding-bottom: 1.8rem;
+
+            .title {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 1rem;
+                }
+
+                h1 {
+                    font-weight: 300;
+                    text-align: left;
+                }
+            }
+
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            color: map-get(variables.$color-palette-billcentrix, 'primary');
+            padding-bottom: 3rem;
+
+            .left {
+                width: min-content;
+
+                .header-description,
+                .plans-description,
+                .banner-description {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .header-description {
+                    height: 28rem;
+                    padding: 2rem 0 5rem 0;
+                    justify-content: space-around;
+                }
+
+                .plans-description{
+                    height: 32rem;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
+                }
+
+                .banner-description{
+                    height: 23rem;
+                    justify-content: space-around;
+                    margin-bottom: 3rem;
+                }
+
+            }
+
+            .right {
+                background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                padding: 2rem;
+                border-radius: 1.5rem;
+
+                .sky-blue {
+                    position: relative;
+                    width: 100%;
+                    background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                    color: #fff;
+                    border-radius: 1.5rem;
+                    padding: 5rem;
+
+                    .text {
+                        width: 55%;
+
+                        h1 {
+                            font-weight: 300;
+                            margin-bottom: 3rem;
+                        }
+                    }
+
+                    .line-horizontal,
+                    .line-vertical {
+                        position: absolute;
+                        top: 0;
+                        background-color: #ffff;
+                        margin-top: 1rem;
+
+                        span {
+                            color: #ffff;
+                        }
+                    }
+
+                    .line-horizontal {
+                        left: 1rem;
+                        width: 95%;
+                        height: 0.5px;
+                    }
+
+                    .line-vertical {
+                        right: 1rem;
+                        width: 1px;
+                        height: 85%;
+                    }
+
+                    .line-text-horizontal {
+                        position: absolute;
+                        top: 2rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: #ffff;
+                    }
+
+                    .line-text-vertical {
+                        position: absolute;
+                        top: 45%;
+                        right: 1.5rem;
+                        transform: translateY(-50%);
+                        color: #ffff;
+                        writing-mode: vertical-lr;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .plans-section {
+                .text {
+                    padding: 3rem 0 1rem 4rem;
+
+                    p {
+                        margin-bottom: 1rem;
+                    }
+
+                    h1 {
+                        font-weight: 300;
+                    }
+
+                }
+
+                .plan-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    gap: 2rem;
+
+                    .plan {
+                        .preview {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            border-radius: 15px;
+                            padding: 0.5rem;
+                            border: none;
+                            background-color: #fff;
+                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+                            justify-content: center;
+                            align-items: center;
+
+                            .see-photo {
+                                width: 70%;
+                                height: 5rem;
+                                border-radius: 5px;
+                                margin-bottom: 1rem;
+                                margin-top: 1rem;
+                                padding: 0.5rem;
+                                border: none;
+                                background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.21);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .header {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 0 1rem;
+
+                                h1 {
+                                    font-weight: 300;
+                                }
+
+                            }
+
+                            h1,
+                            h3,
+                            .big-number {
+                                color: map-get(variables.$color-palette-billcentrix, 'primary');
+                            }
+
+                            .big-number {
+                                font-size: 6rem;
+                                font-weight: 500;
+                            }
+
+                            .including {
+                                padding: 1rem 2rem;
+                                color: map-get(variables.$color-palette-billcentrix, 'navy');
+
+                                .dotted-list li::before {
+                                    content: "\2022";
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .select {
+                                button {
+                                    width: 12rem;
+                                    height: 2.3rem;
+                                    border: none;
+                                    border-radius: 10px;
+                                    font-weight: 700;
+                                    background-color: #fff;
+                                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                                    border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                                }
+                            }
+                        }
+                    }
+
+                    .plan-info {
+                        border-radius: 10px;
+                        font-weight: 700;
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        border: 0.5px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                        padding: 3rem 2rem;
+
+                        h1{
+                            font-weight: 400;
+                            font-size: map-get(variables.$font-sizes, 'title');
+                            margin-bottom: 2.5rem;
+                        }
+
+                        p{
+                            font-size: map-get(variables.$font-sizes, 'text');
+                        }
+                    }
+                }
+            }
+
+            .banner-section{
+                margin-top: 2rem;
+
+                .banner-grid{
+                    background-color: #fff;
+                    padding: 2rem;
+                    border-radius: 1.5rem;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+
+                    .left{
+                        width: 47%;
+                        padding-left: 1rem;
+
+                        h1{
+                            font-weight: 500;
+                            font-size: map-get(variables.$font-sizes, 'title');
+                            margin-bottom: 3rem;
+                        }
+
+                        p{
+                            font-weight: 500;
+                        }
+                    }
+
+                    .right{
+                        width: 90%;
+                        background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        padding: 4rem;
+
+                        p{
+                            font-size: map-get(variables.$font-sizes, 'text');
+                        }
+                    }
+                }
+            }
+
+
+            hr{
+                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                height: 4px;
+                margin: 1.5rem 0;
+            }
+
+            .mail{
+                display: flex;
+                align-items: center;
+
+                h2{
+                    display: inline;
+                    margin-left: 2rem;
+                }
+
+                img{
+                    margin-left: 9rem;
+                    width: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.options-buttons{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+
+    button {
+        width: 8rem;
+    }
+}

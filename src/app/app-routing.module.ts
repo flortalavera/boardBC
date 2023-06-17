@@ -9,6 +9,8 @@ import { MyPlansComponent } from './account-settings/plans/my-plans/my-plans.com
 import { PortalComponent } from './account-settings/portal/portal.component';
 import { MyPortalsComponent } from './account-settings/portal/my-portals/my-portals.component';
 import { PortalCustomizationComponent } from './account-settings/portal-customization/portal-customization.component';
+import { FAQsComponent } from './faqs/faqs.component';
+import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
@@ -19,7 +21,8 @@ const routes: Routes = [
   { path: "my-plans", component: MyPlansComponent},
   { path: "portal", component: PortalComponent },
   { path: "my-portals", component: MyPortalsComponent },
-  { path: "personalize", component: PortalCustomizationComponent}
+  { path: "personalize", component: PortalCustomizationComponent},
+  { path: "faqs", component: FAQsHoversComponent }
 ];
 
 @NgModule({

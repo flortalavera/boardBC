@@ -29,6 +29,8 @@ import { PracticalComponent } from './plans-preview/practical/practical.componen
 import { PlanPracticalComponent } from './partials/plan-practical/plan-practical.component';
 import { ContempoComponent } from './plans-preview/contempo/contempo.component';
 import { PlanContempoComponent } from './partials/plan-contempo/plan-contempo.component';
+import { FAQsComponent } from './faqs/faqs.component';
+import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { PlanContempoComponent } from './partials/plan-contempo/plan-contempo.co
     PracticalComponent,
     PlanPracticalComponent,
     ContempoComponent,
-    PlanContempoComponent
+    PlanContempoComponent,
+    FAQsComponent,
+    FAQsHoversComponent
   ],
   imports: [
     BrowserModule,
