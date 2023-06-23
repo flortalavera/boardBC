@@ -1,19 +1,12 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
+@use '../../design-system/_plan-base';
 
 .preview {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
     height: max-content;
     border-radius: 10px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
     padding: 2rem 1.8rem;
-    border: none;
-    background-color: #fff;
-    justify-content: center;
     border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
     align-items: flex-start;
     text-align: left;
@@ -35,7 +28,6 @@
     }
 
     .including {
-        color: map-get(variables.$color-palette-billcentrix, 'navy');
         padding-bottom: 3rem;
 
         p {

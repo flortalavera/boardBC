@@ -5,7 +5,8 @@ body {
     .grid-overlay {
 
         .header {
-            align-items: center; /* atenti */
+            align-items: center;
+            /* atenti */
 
             .logo {
 
@@ -24,6 +25,91 @@ body {
                 }
             }
 
+            .buttons {
+                .create-plan-btn {
+                    width: 5rem;
+                    background-color: transparent;
+                    color: map-get($color-palette-billcentrix, 'highlighter');
+                    display: none;
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+                }
+
+                @media (max-width: 502px) {
+                    #crearPlanBtn {
+                        display: none;
+                    }
+
+                    .create-plan-btn {
+                        display: block;
+                        margin-top: 0;
+                    }
+
+                    justify-content: flex-end;
+
+                    img {
+                        padding-top: 1rem;
+                        height: 4rem;
+                    }
+                }
+
+            }
+
+        }
+
+        .second-headboard{
+            @media (max-width: 678px){
+                img{
+                    width: 18rem;
+                    margin-right: 0;
+                }
+            }
+
+            @media (max-width: 422px){
+                img{
+                    width: 15rem;
+                }
+            }
+        }
+
+        .back{
+            display: grid;
+            grid-template-areas: '1 2'
+            '3 4';
+            padding: 1rem 0;
+            justify-items: center;
+
+            .delete{
+                color: #E22625;
+                display: none;
+            }
+    
+            .save2{
+                background-color: map-get($color-palette-billcentrix, 'primary');
+                color: #fff;
+                display: none;
+            }
+    
+            .post{
+                background-color: map-get($color-palette-modern, 'success');
+                color: #fff;
+                display: none;
+            }
+        }
+
+
+        @media (max-width: 391px){
+            .save{
+                display: none;
+            }
+
+            .back{
+                .delete, .save2, .post{
+                    display: block;
+                }
+            }
         }
 
     }

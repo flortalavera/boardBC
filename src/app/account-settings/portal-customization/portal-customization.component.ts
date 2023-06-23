@@ -13,7 +13,7 @@ import { ContempoComponent } from 'src/app/plans-preview/contempo/contempo.compo
 export class PortalCustomizationComponent {
   palettes: any[] = [];
   currentIndex: number = 0;
-  dialogRef!: MatDialogRef<ContempoComponent>;
+  dialogRef!: MatDialogRef<PracticalComponent>;
 
   constructor(
     private dialog: MatDialog,
@@ -54,7 +54,7 @@ export class PortalCustomizationComponent {
   }
 
   openModal(): void {
-    this.dialogRef = this.dialog.open<ContempoComponent, any, any>(ContempoComponent, {
+    this.dialogRef = this.dialog.open<PracticalComponent, any, any>(PracticalComponent, {
       // Configuración adicional del modal (ancho, altura, etc.)
       width: '90%',
       height: '90%',
