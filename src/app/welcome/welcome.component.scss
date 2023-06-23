@@ -49,6 +49,13 @@ body {
                 padding-bottom: 3rem;
             }
 
+            @media (max-width: 1004px){
+                img {
+                    width: 75%;
+                    padding-bottom: 3rem;
+                }
+            }
+
             .welcome-text,
             p,
             label {
@@ -127,46 +134,32 @@ body {
                 right: 0;
                 height: 45rem;
             }
+
+            @media (max-width: 1004px){
+                img {
+                    width: 40rem;
+                }
+            }
         }
 
         app-login {
             width: 100%;
         }
 
-    }
-}
-
-
-@media (max-width: 1004px) {
-
-    html,
-    body {
-
-        .welcome-page {
+        @media (max-width: 808px){
             .logo {
-
-                img {
-                    width: 75%;
-                    padding-bottom: 3rem;
-                }
-
+                padding-left: 5rem;
+                width: 50rem;
             }
 
             .imagen-moves {
                 img {
-                    width: 40rem;
+                    width: 30rem;
                 }
             }
         }
-    }
-}
 
-
-@media (max-width: 870px) {
-
-    html,
-    body {
-        .welcome-page {
+        @media (max-width: 870px) {
             background-size: 100% 100%;
             background-repeat: no-repeat;
 
@@ -179,10 +172,6 @@ body {
                 }
 
             }
-        }
-
-        .welcome-page {
-
             .imagen-moves {
                 img {
                     width: 35rem;
@@ -193,37 +182,8 @@ body {
                 }
             }
         }
-    }
-}
 
-@media (max-width: 808px) {
-
-    html,
-    body {
-        .welcome-page {
-            .logo {
-                padding-left: 5rem;
-                width: 50rem;
-            }
-        }
-
-        .welcome-page {
-
-            .imagen-moves {
-                img {
-                    width: 30rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 720px) {
-
-    html,
-    body {
-
-        .welcome-page {
+        @media (max-width: 720px){
             .logo {
                 padding-left: 4rem;
                 width: 60rem;
@@ -238,20 +198,7 @@ body {
             }
         }
 
-        app-footer {
-            position: absolute;
-            width: 100%;
-        }
-    }
-}
-
-
-@media (max-width: 637px) {
-
-    html,
-    body {
-
-        .welcome-page {
+        @media (max-width: 637px) {
             .logo {
                 padding-left: 3rem;
                 width: 70rem;
@@ -265,16 +212,8 @@ body {
                 }
             }
         }
-    }
-}
 
-
-@media (max-width: 577px) {
-
-    html,
-    body {
-
-        .welcome-page {
+        @media (max-width: 577px) {
             .logo {
                 padding-left: 2rem;
             }
@@ -294,16 +233,8 @@ body {
                 }
             }
         }
-    }
-}
-
-@media (max-width: 556px) {
-
-    html,
-    body {
-
-        .welcome-page {
-
+        
+        @media (max-width: 556px){
             .imagen-moves {
 
                 img {
@@ -311,16 +242,8 @@ body {
                 }
             }
         }
-    }
-}
 
-@media (max-width: 517px) {
-
-    html,
-    body {
-
-        .welcome-page {
-
+        @media (max-width: 517px) {
             .imagen-moves {
 
                 img {
@@ -329,19 +252,7 @@ body {
             }
         }
 
-        nav a p{
-            color: transparent;
-        }
-    }
-}
-
-@media (max-width: 470px) {
-
-    html,
-    body {
-
-        .welcome-page {
-
+        @media (max-width: 470px){
             .imagen-moves {
 
                 img {
@@ -349,22 +260,28 @@ body {
                 }
             }
         }
-    }
-}
 
-@media (max-width: 420px) {
-
-    html,
-    body {
-
-        .welcome-page {
-
+        @media (max-width: 420px){
             .imagen-moves {
 
                 img {
                     bottom: -9rem;
                 }
             }
+        }
+    }
+
+    @media (max-width: 720px){
+        
+        app-footer {
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 517px){
+        nav a p{
+            color: transparent;
         }
     }
 }

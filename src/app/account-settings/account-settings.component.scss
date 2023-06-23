@@ -11,6 +11,14 @@ body {
                     height: 5rem;
                     width: 5rem;
                 }
+
+                @media (max-width: 526px) {
+                    justify-content: flex-end;
+
+                    button {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -21,6 +29,11 @@ body {
     padding: 3rem;
     border-radius: 10px;
     background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+
+    @media (max-width: 522px) {
+        padding: 1.5rem;
+
+    }
 
     .second-headboard {
         display: flex;
@@ -36,6 +49,39 @@ body {
         img {
             width: 20rem;
         }
+
+        @media (max-width: 678px) {
+            img {
+                width: 18rem;
+            }
+        }
+    }
+
+    @media (max-width: 591px) {
+        .second-headboard {
+            flex-direction: column;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            img {
+                width: 20rem;
+            }
+        }
+    }
+
+    @media (max-width: 572px) {
+        .second-headboard {
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            img {
+                width: 15rem;
+            }
+        }
     }
 
     .general-data,
@@ -46,6 +92,10 @@ body {
         border-radius: 10px;
         box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
         margin-bottom: 1rem;
+
+        @media (max-width: 503px) {
+            padding: 1.7rem;
+        }
 
         h1 {
             font-weight: 300;
@@ -59,8 +109,12 @@ body {
             gap: 3rem;
             grid-template-columns: 1fr 1fr;
 
-        }
+            @media (max-width: 591px) {
+                display: flex;
+                flex-direction: column;
+            }
 
+        }
     }
 
     .processing-account .right {
@@ -74,7 +128,7 @@ body {
                 width: 100%;
             }
 
-            @media (max-width: 998px){
+            @media (max-width: 998px) {
                 label {
                     margin-right: 1rem;
                 }
@@ -86,6 +140,16 @@ body {
                 background-color: map-get(variables.$color-palette-billcentrix, 'primary');
             }
 
+        }
+
+        @media (max-width: 678px) {
+            .flex-style {
+                flex-direction: column;
+
+                label {
+                    margin-right: 0;
+                }
+            }
         }
 
     }

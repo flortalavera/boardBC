@@ -1,7 +1,22 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
+@use '../../design-system/_mobile-styles';
 
+body {
+    .grid-overlay {
+        .header {
+            .buttons {
+                justify-content: flex-end;
+
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}
 
 .editing-preferences {
     margin-top: 1rem;
@@ -9,10 +24,15 @@
     border-radius: 10px;
     background-color: map-get(variables.$color-palette-billcentrix, 'gray');
 
+    @media (max-width: 458px) {
+        padding: 1.5rem;
+    }
+
     h1 {
         font-weight: 300;
         color: map-get(variables.$color-palette-billcentrix, 'navy');
         margin-bottom: 2rem;
+
     }
 
     .change-of-password {
@@ -22,9 +42,17 @@
         box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
         margin-bottom: 1rem;
 
+        @media (max-width: 503px) {
+            padding: 1.7rem;
+        }
+
         h1 {
             font-weight: 300;
             color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+            @media (max-width: 491px) {
+                font-size: 1.8rem;
+            }
         }
 
         .grid {
@@ -33,6 +61,20 @@
             color: map-get(variables.$color-palette-billcentrix, 'navy');
             gap: 10rem;
             grid-template-columns: 1fr 1fr;
+
+            @media (max-width: 876px) {
+                gap: 7rem;
+            }
+
+            @media (max-width: 676px) {
+                gap: 4rem;
+            }
+
+            @media (max-width: 641px) {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
 
             .right {
                 display: flex;
@@ -75,10 +117,20 @@
 
     .action-buttons {
 
+        @media (max-width: 611px) {
+            .edit-btn {
+                display: none;
+            }
+        }
+
         button {
             margin-right: 2rem;
             color: #fff;
             background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+            @media (max-width: 611px) {
+                margin-right: 0;
+            }
         }
     }
 }

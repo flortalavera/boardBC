@@ -59,25 +59,15 @@ body{
                 }
             }
         }
-    }
 
-    app-footer{
-        flex-shrink: 0;
-    }
-}
-
-@media (max-width: 442px){
-    body {
-        .main-content{
+        @media (max-width: 442px){
             .create-portal{
                 padding: 2rem;
             }
         }
     }
-}
 
-@media (max-width: 428px){
-    body {
+    @media (max-width: 428px){
         .main-content{
             h1{
                 font-size: 1.5rem;
@@ -94,5 +84,9 @@ body{
                 }
             }
         }
+    }
+
+    app-footer{
+        flex-shrink: 0;
     }
 }
