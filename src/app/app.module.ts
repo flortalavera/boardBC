@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 /* Angular Material */
 import { MatMenuModule } from '@angular/material/menu';
@@ -66,7 +67,8 @@ import { ReportsComponent } from './reports/reports.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

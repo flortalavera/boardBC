@@ -2,7 +2,7 @@
 @use '../../design-system/_variables';
 
 .footer {
-    height: 10vh;
+    height: 12vh;
     background-color: map-get(variables.$color-palette-billcentrix, 'navy');
     background-image: url('../../../assets/images/GRID.png');
     background-size: 70%;

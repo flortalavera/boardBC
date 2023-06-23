@@ -1,7 +1,20 @@
 @use '../design-system/_reset';
 @use '../design-system/_variables';
 @use '../design-system/_base';
+@use '../design-system/_mobile-styles';
 
+body {
+    .grid-overlay {
+        .header {
+            .buttons {
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                }
+            }
+        }
+    }
+}
 
 .setting-data {
     margin-top: 1rem;
@@ -58,11 +71,18 @@
             label {
                 color: map-get(variables.$color-palette-billcentrix, 'primary');
                 margin-right: 2rem;
+                width: 100%;
+            }
+
+            @media (max-width: 998px){
+                label {
+                    margin-right: 1rem;
+                }
             }
 
             .custom-account-btn {
                 color: #fff;
-                width: 15rem;
+                width: 100%;
                 background-color: map-get(variables.$color-palette-billcentrix, 'primary');
             }
 

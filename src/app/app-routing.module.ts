@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: "portal", component: PortalComponent },
   { path: "my-portals", component: MyPortalsComponent },
   { path: "personalize", component: PortalCustomizationComponent},
-  { path: "faqs", component: FAQsHoversComponent },
+  { path: "faqs", component: FAQsComponent },  
+  { path: "faqs-hover", component: FAQsHoversComponent },
   { path: "reports", component: ReportsComponent}
 ];
 

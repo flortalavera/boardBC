@@ -10,7 +10,6 @@ export class WelcomeComponent {
   showWelcomeComponent: boolean = true;
 
   onLoginClick() {
-
     this.showWelcomeComponent = false;
     
   }

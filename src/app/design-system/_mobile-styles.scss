@@ -1,0 +1,29 @@
+@import 'variables';
+
+body {
+
+    .grid-overlay {
+
+        .header {
+
+            .logo {
+
+                @media (max-width: 1001px) {
+                    background-image: url("../../assets/icons/LOGO.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    height: 4rem;
+                    width: 4rem;
+
+                    img {
+                        padding-top: 1rem;
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

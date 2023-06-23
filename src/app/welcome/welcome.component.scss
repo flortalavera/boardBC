@@ -7,19 +7,27 @@ body {
     margin: 0;
     padding: 0;
 
-    nav{
+    nav {
         width: 100%;
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         padding-right: 1rem;
-    
-        p{
+
+        img[alt="Logo Billcentrix"] {
+            width: 15rem;
+        }
+
+        p {
             margin: 0 2rem;
             padding-top: 2rem;
             font-weight: 600;
             color: map-get(variables.$color-palette-billcentrix, 'highlighter');
+        }
+
+        img{
+            padding-top: 1rem;
         }
     }
 
@@ -34,10 +42,11 @@ body {
         outline: none;
 
         .logo {
-            padding-left: 5rem;
+            padding-left: 8rem;
 
             img {
-                width: 60%;
+                width: 65%;
+                padding-bottom: 3rem;
             }
 
             .welcome-text,
@@ -45,6 +54,10 @@ body {
             label {
                 color: #fff;
 
+            }
+
+            h1 {
+                font-weight: 300;
             }
 
             .options-buttons {
@@ -77,32 +90,281 @@ body {
             .other-options {
                 margin-top: 2rem;
                 display: flex;
+                align-items: center;
 
                 .checkbox {
+                    display: flex;
+                    align-items: center;
                     margin-right: 5rem;
+
+                    label {
+                        margin-left: 0.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
                 }
 
                 .checkbox input[type="checkbox"] {
-                    border: #fff;
+                    margin-right: 0.5rem;
                     transform: scale(1.8);
-                    margin-right: 1rem;
                 }
 
                 .help {
                     text-align: center;
                 }
             }
+
         }
 
         .imagen-moves {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
             img {
-                width: 100%;
+                position: absolute;
+                right: 0;
+                height: 45rem;
             }
         }
 
-        app-login{
+        app-login {
             width: 100%;
         }
 
+    }
+}
+
+
+@media (max-width: 1004px) {
+
+    html,
+    body {
+
+        .welcome-page {
+            .logo {
+
+                img {
+                    width: 75%;
+                    padding-bottom: 3rem;
+                }
+
+            }
+
+            .imagen-moves {
+                img {
+                    width: 40rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 870px) {
+
+    html,
+    body {
+        .welcome-page {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+            .logo {
+                padding-left: 6rem;
+
+                img {
+                    width: 85%;
+                    padding-bottom: 3rem;
+                }
+
+            }
+        }
+
+        .welcome-page {
+
+            .imagen-moves {
+                img {
+                    width: 35rem;
+                    height: 40rem;
+                    position: absolute;
+                    right: 0;
+                    bottom: -2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 808px) {
+
+    html,
+    body {
+        .welcome-page {
+            .logo {
+                padding-left: 5rem;
+                width: 50rem;
+            }
+        }
+
+        .welcome-page {
+
+            .imagen-moves {
+                img {
+                    width: 30rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+
+    html,
+    body {
+
+        .welcome-page {
+            .logo {
+                padding-left: 4rem;
+                width: 60rem;
+            }
+
+            .imagen-moves {
+                img {
+                    height: 33rem;
+                    width: 25rem;
+                    bottom: -2rem;
+                }
+            }
+        }
+
+        app-footer {
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 637px) {
+
+    html,
+    body {
+
+        .welcome-page {
+            .logo {
+                padding-left: 3rem;
+                width: 70rem;
+            }
+
+            .imagen-moves {
+                img {
+                    height: 30rem;
+                    width: 20rem;
+                    bottom: -3rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 577px) {
+
+    html,
+    body {
+
+        .welcome-page {
+            .logo {
+                padding-left: 2rem;
+            }
+
+            .imagen-moves {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-height: 30rem;
+                    max-width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 556px) {
+
+    html,
+    body {
+
+        .welcome-page {
+
+            .imagen-moves {
+
+                img {
+                    bottom: -4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 517px) {
+
+    html,
+    body {
+
+        .welcome-page {
+
+            .imagen-moves {
+
+                img {
+                    bottom: -6rem;
+                }
+            }
+        }
+
+        nav a p{
+            color: transparent;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+
+    html,
+    body {
+
+        .welcome-page {
+
+            .imagen-moves {
+
+                img {
+                    bottom: -8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+
+    html,
+    body {
+
+        .welcome-page {
+
+            .imagen-moves {
+
+                img {
+                    bottom: -9rem;
+                }
+            }
+        }
     }
 }

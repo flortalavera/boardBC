@@ -5,27 +5,39 @@
 <mat-menu #menu="matMenu" class="menu">
     <!-- Contenido del menú -->
     <button mat-menu-item>
-        <img src="../../assets/icons/preferencias.png" alt="preferencias">
-        <span>Preferencias</span>
+        <a [routerLink]="['/preferences']">
+            <img src="../../assets/icons/preferencias.png" alt="preferencias">
+            <span>Preferencias</span>
+        </a>
     </button>
     <button mat-menu-item>
-        <img src="../../assets/icons/etiqueta.png" alt="planes">
-        <span>Planes</span>
+        <a [routerLink]="['/plans']">
+            <img src="../../assets/icons/etiqueta.png" alt="planes">
+            <span>Planes</span>
+        </a>
     </button>
     <button mat-menu-item>
-        <img src="../../assets/icons/cuadra-white.png" alt="portales">
-        <span>Portales</span>
+        <a [routerLink]="['/portal']">
+            <img src="../../assets/icons/cuadra-white.png" alt="portales">
+            <span>Portales</span>
+        </a>
     </button>
     <button mat-menu-item>
-        <img src="../../assets/icons/grafico.png" alt="reportes">
-        <span>Reportes</span>
+        <a [routerLink]="['/reports']">
+            <img src="../../assets/icons/grafico.png" alt="reportes">
+            <span>Reportes</span>
+        </a>
     </button>
     <button mat-menu-item>
-        <img src="../../assets/icons/informacion.png" alt="FAQs">
-        <span>FAQs</span>
+        <a [routerLink]="['/faqs']">
+            <img src="../../assets/icons/informacion.png" alt="FAQs">
+            <span>FAQs</span>
+        </a>
     </button>
     <button mat-menu-item>
-        <img src="../../assets/icons/salida.png" alt="salir">
-        <span>Salir</span>
+        <a [routerLink]="['/']">
+            <img src="../../assets/icons/salida.png"  alt="salir">
+            <span>Salir</span>
+        </a>
     </button>
 </mat-menu>
