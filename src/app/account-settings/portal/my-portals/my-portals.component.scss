@@ -1,35 +1,93 @@
 @use '../../../design-system/_reset';
 @use '../../../design-system/_variables';
 @use '../../../design-system/_base';
+@use '../../../design-system/_mobile-styles';
 
+body{
+    .grid-overlay{
+        padding-bottom: 2rem;
 
-.my-portals-data {
-    margin-top: 1rem;
-    padding: 1.5rem 5rem;
-    border-radius: 10px;
-    background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+        .my-portals-data {
+            margin-top: 1rem;
+            padding: 1.5rem 5rem;
+            border-radius: 10px;
+            background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+        
+            @media (max-width: 1220px) {
+                padding: 1.5rem 3rem;
+            }
 
+            @media (max-width: 636px) {
+                padding: 1.5rem;
+            }
+        
+        
+            .second-headboard {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1rem;
 
-    .second-headboard {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1rem;
+                @media (max-width: 641px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+        
+                    h1{
+                        margin-bottom: 1rem;
+                    }
+                }
 
-        h1 {
-            font-weight: 300;
-            color: map-get(variables.$color-palette-billcentrix, 'navy');
+                h1 {
+                    font-weight: 300;
+                    color: map-get(variables.$color-palette-billcentrix, 'navy');
+                }
+        
+                img {
+                    width: 20rem;
+                    margin-right: 5rem;
+                }
+
+                @media (max-width: 678px){
+                    img{
+                        width: 18rem;
+                        margin-right: 0;
+                    }
+                }
+    
+                @media (max-width: 422px){
+                    img{
+                        width: 15rem;
+                    }
+                }
+            }
+        
+            .grid {
+                display: grid;
+                grid-template-areas: '1 2 3';
+                justify-content: space-between;
+
+                @media (max-width: 888px) {
+                    grid-template-areas: '1 2'
+                    '3 3';
+                    justify-content: space-around;
+                }
+
+                @media (max-width: 609px){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
         }
 
-        img {
-            width: 20rem;
-            margin-right: 5rem;
+        .options-buttons {
+            display: flex;
+            justify-content: space-around;
+        
+            button {
+                width: 8rem;
+            }
+        
         }
-    }
-
-    .grid {
-        display: grid;
-        grid-template-areas: '1 2 3';
-        justify-content: space-between;
     }
 }

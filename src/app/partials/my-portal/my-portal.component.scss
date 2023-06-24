@@ -5,6 +5,23 @@
 .preview{
     width: fit-content;
     text-align: left;
+    width: 20rem;
+
+    @media (max-width: 1371px) {
+        width: 20rem;
+    }
+
+    @media (max-width: 1164px) {
+        width: 17rem;
+    }
+
+    @media (max-width: 942px) {
+        width: 15rem;
+    }
+
+    @media (max-width: 609px) {
+        width: 19rem;
+    }
 
     .header{
         img{
@@ -22,7 +39,7 @@
     .content-portal{
         height: 20rem;
         border-radius: 10px;
-        width: 23rem;
+        width: 90%;
         background-color: map-get(variables.$color-palette-billcentrix, 'gray');
     }
 

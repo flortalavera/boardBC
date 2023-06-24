@@ -3,7 +3,19 @@
 @use '../../design-system/_plan-base';
 
 .preview{
-    width: 90%;
+    width: 20rem;
+
+    @media (max-width: 1196px){
+        width: 18rem;
+    }
+
+    @media (max-width: 964px){
+        width: 16rem;
+    }
+
+    @media (max-width: 395px){
+        width: 18rem;
+    }
 
     .options {
         display: flex;

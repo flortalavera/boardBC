@@ -54,6 +54,10 @@
         padding: 1rem 2rem;
         color: map-get($color-palette-billcentrix, 'navy');
 
+        @media (max-width: 964px){
+            padding: 1rem;
+        }
+
         .dotted-list li::before {
             content: "\2022";
             margin-right: 5px;

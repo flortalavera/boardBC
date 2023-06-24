@@ -2,6 +2,7 @@
 @use '../../../design-system/_variables';
 @use '../../../design-system/_base';
 @use '../../../design-system/_plan-base';
+@use '../../../design-system/_mobile-styles';
 
 .my-plans-data {
     margin-top: 1rem;
@@ -9,11 +10,28 @@
     border-radius: 10px;
     background-color: map-get(variables.$color-palette-billcentrix, 'gray');
 
+    @media (max-width: 1196px) {
+        padding: 1.5rem 3rem;
+    }
+
+    @media (max-width: 1031px) {
+        padding: 1.5rem;
+    }
+
     .second-headboard {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
+
+        @media (max-width: 641px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
 
         h1 {
             font-weight: 300;
@@ -29,6 +47,28 @@
     .grid {
         display: grid;
         grid-template-areas: '1 2 3';
+        justify-items: center;
+
+        @media (max-width: 888px) {
+            grid-template-areas:
+                '1 2'
+                '3 3';
+            grid-gap: 5rem;
+        }
+
+        @media (max-width: 675px){
+            gap: 3rem;
+        }
+
+        @media (max-width: 675px){
+            gap: 1rem;
+        }
+
+        @media (max-width: 609px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 }
 

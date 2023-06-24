@@ -1,7 +1,7 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
-
+@use '../../design-system/_mobile-styles';
 
 .create-portal {
     margin-top: 1rem;
@@ -9,11 +9,24 @@
     border-radius: 10px;
     background-color: map-get(variables.$color-palette-billcentrix, 'gray');
 
+    @media (max-width: 1074px) {
+        padding: 2rem;
+    }
+
     .second-headboard {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
+
+        @media (max-width: 641px) {
+            flex-direction: column;
+            align-items: flex-start;
+
+            h1{
+                margin-bottom: 1rem;
+            }
+        }
 
         h1 {
             font-weight: 300;
@@ -33,9 +46,23 @@
         box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
         margin-bottom: 1rem;
 
+        @media (max-width: 449px) {
+            padding: 1.5rem;
+        }
+
         h1 {
             font-weight: 300;
             color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+
+            @media (max-width: 785px) {
+                font-size: 1.8rem;
+            }
+
+            @media (max-width: 717px) {
+                font-size: 1.5rem;
+            }
+
         }
 
         p {
@@ -48,19 +75,111 @@
             color: map-get(variables.$color-palette-billcentrix, 'navy');
             text-align: center;
             gap: 1rem;
+            justify-items: center;
+
+            @media (max-width: 955px) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    '1 2'
+                    '3 3';
+            }
+
+            @media (max-width: 818px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .line{
+                margin-top: 1rem;
+                padding: 0 1.5rem;
+                border-right: solid 1px map-get(variables.$color-palette-billcentrix, 'primary');
+                border-left: solid 1px map-get(variables.$color-palette-billcentrix, 'primary');
+
+                @media (max-width: 1491px) {
+                    padding: 0 1.3rem;
+                }
+
+                @media (max-width: 1444px) {
+                    padding: 0 2.3rem;
+                }
+
+                @media (max-width: 1399px) {
+                    padding: 0 1.8rem;
+                }
+
+                @media (max-width: 1377px) {
+                    padding: 0 1.5rem;
+                }
+
+                @media (max-width: 955px) {
+                    border-right: none;
+                    padding: 0 2.5rem;
+                }
+
+                @media (max-width: 911px) {
+                    padding: 0 2rem;
+                }
+
+                @media (max-width: 818px) {
+                    border-left: none;
+                }
+            }
 
             .essential,
             .practical,
             .contemporary {
-                margin-top: 1rem;
                 padding: 3rem;
-                width: 90%;
+                margin-top: 1rem;
+                width: 25rem;
                 border-radius: 10px;
                 background-color: map-get(variables.$color-palette-billcentrix, 'gray');
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 position: relative;
+
+                img {
+                    margin-top: 1rem;
+                }
+
+                @media (max-width: 1528px) {
+                    padding: 2rem;
+                }
+
+                @media (max-width: 1444px) {
+                    width: 22rem;
+
+                    img {
+                        width: 90%;
+                        height: 25rem;
+                    }
+                }
+
+                @media (max-width: 1304px) {
+                    width: 20rem;
+                }
+
+                @media (max-width: 1187px) {
+                    padding: 2rem 1rem;
+                    width: 18rem;
+                }
+
+                @media (max-width: 1074px) {
+                    width: 16rem;
+                }
+
+                @media (max-width: 955px){
+                    width: 20rem;
+                }
+
+                @media (max-width: 488px){
+                    width: 18rem;
+                }
+
+                @media (max-width: 432px){
+                    width: 16rem;
+                }
 
                 .preview {
                     display: flex;
@@ -80,6 +199,7 @@
                         }
 
                         img {
+                            margin-top: 0;
                             width: 2rem;
                             height: 2rem;
                         }
@@ -89,29 +209,13 @@
 
             }
 
+            .practical{
+                padding: 3rem 0;
+                margin-top: 0;
+            }
+
             p {
-                padding: 1rem;
-            }
-
-
-            .practical::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 0.5px;
-                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
-                left: -2rem;
-            }
-
-            .practical::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                width: 1px;
-                background-color: map-get(variables.$color-palette-billcentrix, 'primary');
-                right: -2rem;
+                padding: 1rem 1rem 0 1rem;
             }
 
         }

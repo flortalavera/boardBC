@@ -26,7 +26,7 @@ body {
             }
 
             .buttons {
-                .create-plan-btn {
+                .create-plan-btn, .create-question-btn {
                     width: 5rem;
                     background-color: transparent;
                     color: map-get($color-palette-billcentrix, 'highlighter');
@@ -38,11 +38,11 @@ body {
                 }
 
                 @media (max-width: 502px) {
-                    #crearPlanBtn {
+                    #createPlanBtn, #createQuestionBtn {
                         display: none;
                     }
 
-                    .create-plan-btn {
+                    .create-plan-btn, .create-question-btn {
                         display: block;
                         margin-top: 0;
                     }
