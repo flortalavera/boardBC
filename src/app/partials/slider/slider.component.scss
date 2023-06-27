@@ -11,8 +11,16 @@
     margin-bottom: 1rem;
     color: map-get(variables.$color-palette-billcentrix, 'primary');
 
+    @media (max-width: 473px) {
+        padding: 1.5rem;
+    }
+
     h1 {
         font-weight: 300;
+
+        @media (max-width: 736px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
@@ -26,6 +34,10 @@
         border-radius: 10px;
         display: flex;
         justify-content: center;
+
+        @media (max-width: 452px) {
+            padding: 0.5rem;
+        }
 
         .carousel-nav-left,
         .carousel-nav-right {
@@ -82,6 +94,16 @@
                 text-align: center;
                 opacity: 0.7;
 
+                @media (max-width: 707px) {
+                    flex-basis: 50%;
+                    max-width: 50%;
+                }
+
+                @media (max-width: 564px) {
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+
                 &.active {
                     opacity: 1;
                 }
@@ -113,6 +135,11 @@
                 img {
                     width: 2rem;
                     height: 2rem;
+
+                    @media (max-width: 736px) {
+                        width: 1.3rem;
+                        height: 1.3rem;
+                    }
                 }
             }
 

@@ -26,7 +26,11 @@ body {
             }
 
             .buttons {
-                .create-plan-btn, .create-question-btn, .create-report-btn {
+
+                .create-plan-btn,
+                .create-question-btn,
+                .create-report-btn,
+                .create-portal-btn{
                     width: 5rem;
                     background-color: transparent;
                     color: map-get($color-palette-billcentrix, 'highlighter');
@@ -38,11 +42,18 @@ body {
                 }
 
                 @media (max-width: 502px) {
-                    #createPlanBtn, #createQuestionBtn, #createReportBtn {
+
+                    #createPlanBtn,
+                    #createQuestionBtn,
+                    #createReportBtn,
+                    #createPortalBtn {
                         display: none;
                     }
 
-                    .create-plan-btn, .create-question-btn, .create-report-btn {
+                    .create-plan-btn,
+                    .create-question-btn,
+                    .create-report-btn,
+                    .create-portal-btn {
                         display: block;
                         margin-top: 0;
                     }
@@ -59,40 +70,40 @@ body {
 
         }
 
-        .second-headboard{
-            @media (max-width: 678px){
-                img{
+        .second-headboard {
+            @media (max-width: 678px) {
+                img {
                     width: 18rem;
                     margin-right: 0;
                 }
             }
 
-            @media (max-width: 422px){
-                img{
+            @media (max-width: 422px) {
+                img {
                     width: 15rem;
                 }
             }
         }
 
-        .back{
+        .back {
             display: grid;
             grid-template-areas: '1 2'
-            '3 4';
+                '3 4';
             padding: 1rem 0;
             justify-items: center;
 
-            .delete{
+            .delete {
                 color: #E22625;
                 display: none;
             }
-    
-            .save2{
+
+            .save2 {
                 background-color: map-get($color-palette-billcentrix, 'primary');
                 color: #fff;
                 display: none;
             }
-    
-            .post{
+
+            .post {
                 background-color: map-get($color-palette-modern, 'success');
                 color: #fff;
                 display: none;
@@ -100,13 +111,16 @@ body {
         }
 
 
-        @media (max-width: 391px){
-            .save{
+        @media (max-width: 391px) {
+            .save {
                 display: none;
             }
 
-            .back{
-                .delete, .save2, .post{
+            .back {
+
+                .delete,
+                .save2,
+                .post {
                     display: block;
                 }
             }

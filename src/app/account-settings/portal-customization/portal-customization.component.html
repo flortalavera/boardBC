@@ -5,7 +5,8 @@
                 <img src="../../assets/images/BRAND2.png" alt="logo de Billcentrix">
             </div>
             <div class="buttons">
-                <button>Crear nuevo portal</button>
+                <button id="createPortalBtn">Crear nuevo portal</button>
+                <button class="create-portal-btn"><h1>+</h1></button>
                 <img src="../../../assets/icons/cubo-green.png" alt="icono portales">
                 <app-menu></app-menu>
             </div>
@@ -82,8 +83,8 @@
                             </div>
                         </div>
                         <div class="right">
-                            <img src="../../../assets/images/indicadores-pag.png" alt="sectores de la pagina">
-                            <img src="../../../assets/images/pag-min.png" alt="muestra de la pagina">
+                            <img class="section" src="../../../assets/images/indicadores-pag.png" alt="sectores de la pagina">
+                            <img class="sample" src="../../../assets/images/pag-min.png" alt="muestra de la pagina">
                         </div>
                     </div>
                 </div>
@@ -153,13 +154,20 @@
             </div>
         </div>
         <div class="buttons">
-            <button>Atrás</button>
+            <div class="preview-mobile">
+                <img src="../../../assets/icons/ver-blanco.png" alt="vista previa">
+                <p class="action-description">Vista previa</p>
+            </div>
+            <div class="buttons-mobile">
+                <button>Atrás</button>
+                <button class="after">Siguiente</button>
+            </div>
             <div class="action-buttons">
                 <div class="preview" (click)="openModal()">
                     <img src="../../../assets/icons/ver-blanco.png" alt="vista previa">
                     <p class="action-description">Vista previa</p>
                 </div>
-                <button>Finalizar</button>
+                <button class="finish">Finalizar</button>
             </div>
         </div>
     </div>
