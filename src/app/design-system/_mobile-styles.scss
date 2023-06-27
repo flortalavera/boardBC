@@ -26,7 +26,7 @@ body {
             }
 
             .buttons {
-                .create-plan-btn, .create-question-btn {
+                .create-plan-btn, .create-question-btn, .create-report-btn {
                     width: 5rem;
                     background-color: transparent;
                     color: map-get($color-palette-billcentrix, 'highlighter');
@@ -38,11 +38,11 @@ body {
                 }
 
                 @media (max-width: 502px) {
-                    #createPlanBtn, #createQuestionBtn {
+                    #createPlanBtn, #createQuestionBtn, #createReportBtn {
                         display: none;
                     }
 
-                    .create-plan-btn, .create-question-btn {
+                    .create-plan-btn, .create-question-btn, .create-report-btn {
                         display: block;
                         margin-top: 0;
                     }

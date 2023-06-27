@@ -12,6 +12,7 @@ import { PortalCustomizationComponent } from './account-settings/portal-customiz
 import { FAQsComponent } from './faqs/faqs.component';
 import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 import { ReportsComponent } from './reports/reports.component';
+import { SliderComponent } from './partials/slider/slider.component';
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },

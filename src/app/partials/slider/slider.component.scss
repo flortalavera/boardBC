@@ -1,0 +1,123 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+@use '../../design-system/_base';
+@use '../../design-system/_mobile-styles';
+
+.color-palette {
+    background-color: #fff;
+    padding: 1.5rem 2.3rem;
+    border-radius: 10px;
+    box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+    margin-bottom: 1rem;
+    color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+    h1 {
+        font-weight: 300;
+    }
+
+    p {
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+    }
+
+    .color-palette-content {
+        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+
+        .carousel-nav-left,
+        .carousel-nav-right {
+            background-color: #fff;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #e6e6e6;
+            }
+        }
+
+        .carousel-nav-left.disabled,
+        .carousel-nav-right.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+
+        .arrow-left,
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border: solid map-get(variables.$color-palette-billcentrix, 'primary');
+            ;
+            border-width: 0 5px 5px 0;
+            display: inline-block;
+            padding: 2px;
+
+            &.arrow-left {
+                transform: rotate(135deg);
+            }
+
+            &.arrow-right {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+
+            .palette {
+                flex: 0 0 calc(100% / 3);
+                max-width: calc(100% / 3);
+                transition: transform 0.3s ease-in-out;
+                padding: 0 10px;
+                text-align: center;
+                opacity: 0.7;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .preview {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2rem;
+
+            .preview-text {
+                display: flex;
+                align-items: center;
+
+                p {
+                    padding: 0;
+                    margin-left: 1rem;
+                    color: map-get(variables.$color-palette-billcentrix, 'primary');
+                }
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+        }
+
+    }
+
+}

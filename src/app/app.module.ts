@@ -33,6 +33,7 @@ import { PlanContempoComponent } from './partials/plan-contempo/plan-contempo.co
 import { FAQsComponent } from './faqs/faqs.component';
 import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 import { ReportsComponent } from './reports/reports.component';
+import { SliderComponent } from './partials/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ReportsComponent } from './reports/reports.component';
     PlanContempoComponent,
     FAQsComponent,
     FAQsHoversComponent,
-    ReportsComponent
+    ReportsComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

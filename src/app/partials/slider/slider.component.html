@@ -1,0 +1,30 @@
+<div class="color-palette">
+    <h1>Select the color palette that best suits your brand</h1>
+    <p>You can go back and change the colors whenever you want.</p>
+    <div class="color-palette-content">
+        <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
+            <div class="arrow-left"></div>
+        </div>
+        <div class="carousel-container">
+            <ng-container *ngFor="let palette of visiblePalettes; let i = index">
+              <div class="palette" [class.active]="currentIndex === i">
+                <img [src]="palette.image" [alt]="palette.title">
+                <h1>{{ palette.title }}</h1>
+                <div class="preview">
+                  <div class="preview-text">
+                    <img src="../../../assets/icons/ver.png" alt="preview">
+                    <p class="text-right">Preview</p>
+                  </div>
+                  <div class="round-checkbox">
+                    <input type="checkbox" id="myCheckbox">
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === palettes.length - 1 }"
+            (click)="next()">
+            <div class="arrow-right"></div>
+        </div>
+    </div>
+</div>
