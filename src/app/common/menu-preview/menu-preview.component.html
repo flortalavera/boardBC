@@ -1,0 +1,27 @@
+<button mat-icon-button [matMenuTriggerFor]="menuPreview" class="transparent">
+    <img src="../../assets/icons/menu-blue.png" alt="menu hamburguesa">
+</button>
+
+<mat-menu #menuPreview="matMenu" class="menu">
+    <!-- Contenido del menú -->
+    <button mat-menu-item>
+        <a href="#">
+            <span>Inicio</span>
+        </a>
+    </button>
+    <button mat-menu-item>
+        <a href="#">
+            <span>Precios</span>
+        </a>
+    </button>
+    <button mat-menu-item>
+        <a href="#">
+            <span>Beneficios</span>
+        </a>
+    </button>
+    <button mat-menu-item>
+        <a href="#">
+            <span>Contacto</span>
+        </a>
+    </button>
+</mat-menu>

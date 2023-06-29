@@ -3,3 +3,9 @@
         width: $width;
     }
 }
+
+@mixin responsive-padding($max-width, $padding) {
+    @media (max-width: $max-width) {
+        padding: $padding;
+    }
+}

@@ -34,6 +34,7 @@ import { FAQsComponent } from './faqs/faqs.component';
 import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SliderComponent } from './partials/slider/slider.component';
+import { MenuPreviewComponent } from './common/menu-preview/menu-preview.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { SliderComponent } from './partials/slider/slider.component';
     FAQsComponent,
     FAQsHoversComponent,
     ReportsComponent,
-    SliderComponent
+    SliderComponent,
+    MenuPreviewComponent
   ],
   imports: [
     BrowserModule,
