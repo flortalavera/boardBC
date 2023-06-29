@@ -1,45 +1,89 @@
 @import 'variables';
+@import 'mixins';
 
-body{
+body {
     height: max-content;
     width: 160vh;
     padding: 1rem;
     background-color: #fff;
+    display: flexbox;
 
-    .header{
+    .header {
         display: inline-flex;
         justify-content: flex-end;
-        width: 100%;
         color: map-get($color-palette-billcentrix, 'primary');
         align-items: center;
+        width: 100%;
 
-        p{
+        @include responsive-width(1330px, 60rem);
+        @include responsive-width(1258px, 57rem);
+        @include responsive-width(1191px, 54rem);
+        @include responsive-width(1127px, 51rem);
+        @include responsive-width(1061px, 48rem);
+        @include responsive-width(995px, 45rem);
+        @include responsive-width(928px, 42rem);
+        @include responsive-width(866px, 39rem);
+        @include responsive-width(800px, 36rem);
+        @include responsive-width(737px, 33rem);
+        @include responsive-width(686px, 30rem);
+        @include responsive-width(624px, 27rem);
+        @include responsive-width(565px, 24rem);
+        @include responsive-width(506px, 21rem);
+        @include responsive-width(448px, 18rem);
+
+
+        p {
             padding: 0 1rem 0 0.4rem;
         }
-        
-        .close{
+
+        .close {
             width: 0.7rem;
             height: 0.9rem;
         }
     }
 
-    .main-content{
-        .navbar{
+    .main-content {
+        
+        @include responsive-width(1330px, 62rem);
+        @include responsive-width(1267px, 60rem);
+        @include responsive-width(1230px, 58rem);
+        @include responsive-width(1190px, 56rem);
+        @include responsive-width(1147px, 54rem);
+        @include responsive-width(1107px, 52rem);
+        @include responsive-width(1065px, 50rem);
+        @include responsive-width(1030px, 48rem);
+        @include responsive-width(995px, 46rem);
+        @include responsive-width(947px, 44rem);
+        @include responsive-width(906px, 42rem);
+        @include responsive-width(868px, 40rem);
+        @include responsive-width(828px, 38rem);
+        @include responsive-width(789px, 36rem);
+        @include responsive-width(751px, 34rem);
+        @include responsive-width(706px, 32rem);
+        @include responsive-width(668px, 30rem);
+        @include responsive-width(625px, 28rem);
+        @include responsive-width(588px, 26rem);
+        @include responsive-width(545px, 24rem);
+        @include responsive-width(507px, 22rem);
+        @include responsive-width(467px, 20rem);
+        @include responsive-width(430px, 18rem);
+
+        .navbar {
             display: flex;
             align-items: center;
             justify-content: space-around;
             margin-bottom: 1.7rem;
 
-            h3{
+            h3 {
                 color: map-get($color-palette-billcentrix, 'navy');
                 font-weight: 500;
             }
 
-            .logo{
+            .logo {
                 display: flex;
                 align-items: center;
 
-                h3{
+                h3 {
                     margin-left: 1rem;
                     color: map-get($color-palette-billcentrix, 'primary');
                 }
@@ -47,16 +91,40 @@ body{
         }
     }
 
-    .options-buttons{
+    .options-buttons {
         justify-content: space-around;
         display: flex;
         align-items: center;
 
-        button{
+        @include responsive-width(1330px, 62rem);
+        @include responsive-width(1267px, 60rem);
+        @include responsive-width(1230px, 58rem);
+        @include responsive-width(1190px, 56rem);
+        @include responsive-width(1147px, 54rem);
+        @include responsive-width(1107px, 52rem);
+        @include responsive-width(1065px, 50rem);
+        @include responsive-width(1030px, 48rem);
+        @include responsive-width(995px, 46rem);
+        @include responsive-width(947px, 44rem);
+        @include responsive-width(906px, 42rem);
+        @include responsive-width(868px, 40rem);
+        @include responsive-width(828px, 38rem);
+        @include responsive-width(789px, 36rem);
+        @include responsive-width(751px, 34rem);
+        @include responsive-width(706px, 32rem);
+        @include responsive-width(668px, 30rem);
+        @include responsive-width(625px, 28rem);
+        @include responsive-width(588px, 26rem);
+        @include responsive-width(545px, 24rem);
+        @include responsive-width(507px, 22rem);
+        @include responsive-width(467px, 20rem);
+        @include responsive-width(430px, 18rem);
+
+        button {
             width: 8rem;
         }
 
-        .back-btn{
+        .back-btn {
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.48);
         }
     }

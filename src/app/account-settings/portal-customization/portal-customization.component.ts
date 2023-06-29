@@ -40,7 +40,7 @@ export class PortalCustomizationComponent {
     if (component) {
       this.dialogRef = this.dialog.open(component, {
         width: '90%',
-        height: '90%',
+        height: '100%',
         scrollStrategy: this.overlay.scrollStrategies.reposition()
       });
 

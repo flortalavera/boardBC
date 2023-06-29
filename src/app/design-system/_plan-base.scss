@@ -3,7 +3,7 @@
 .preview{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 16rem;
     border-radius: 5px;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -56,6 +56,10 @@
 
         @media (max-width: 964px){
             padding: 1rem;
+        }
+
+        .dotted-list li{
+            font-size: 0.8rem;
         }
 
         .dotted-list li::before {

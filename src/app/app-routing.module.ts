@@ -12,7 +12,10 @@ import { PortalCustomizationComponent } from './account-settings/portal-customiz
 import { FAQsComponent } from './faqs/faqs.component';
 import { FAQsHoversComponent } from './faqs-hovers/faqs-hovers.component';
 import { ReportsComponent } from './reports/reports.component';
-import { SliderComponent } from './partials/slider/slider.component';
+import { BasicComponent } from './plans-preview/basic/basic.component';
+import { PracticalComponent } from './plans-preview/practical/practical.component';
+import { ContempoComponent } from './plans-preview/contempo/contempo.component';
+
 
 const routes: Routes = [
   { path: "", component: WelcomeComponent },
@@ -26,7 +29,10 @@ const routes: Routes = [
   { path: "personalize", component: PortalCustomizationComponent},
   { path: "faqs", component: FAQsComponent },  
   { path: "faqs-hover", component: FAQsHoversComponent },
-  { path: "reports", component: ReportsComponent}
+  { path: "reports", component: ReportsComponent },
+  { path: "basic", component: BasicComponent },
+  { path: "practic", component: PracticalComponent },
+  { path: "contempo", component: ContempoComponent }
 ];
 
 @NgModule({
