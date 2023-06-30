@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -9,6 +9,9 @@ export class SliderComponent implements OnInit {
   palettes: any[] = [];
   currentIndex: number = 0;
   visiblePalettes: any[] = [];
+  selectedPalette: any;
+
+  @Output() paletteSelected = new EventEmitter<any>();
 
   ngOnInit() {
 
@@ -46,5 +49,16 @@ export class SliderComponent implements OnInit {
     const end = start + 3;
     this.visiblePalettes = this.palettes.slice(start, end);
   }
+
+  selectPalette(palette: any): void {
+    this.selectedPalette = palette;
+    this.palettes.forEach(p => {
+      if (p !== palette) {
+        p.selected = false;
+      }
+    });
+  
+    this.paletteSelected.emit(palette.title);
+  }  
 
 }

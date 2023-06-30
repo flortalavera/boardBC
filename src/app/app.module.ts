@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 /* Angular Material */
 import { MatMenuModule } from '@angular/material/menu';
@@ -72,7 +73,8 @@ import { MenuPreviewComponent } from './common/menu-preview/menu-preview.compone
     BrowserAnimationsModule,
     MatMenuModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

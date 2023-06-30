@@ -13,6 +13,7 @@ import { ContempoComponent } from 'src/app/plans-preview/contempo/contempo.compo
 export class PortalCustomizationComponent {
   dialogRef!: MatDialogRef<PracticalComponent>;
   selectedTheme: string = 'Contempo';
+  selectedPalette: any;
 
   constructor(
     private dialog: MatDialog,
@@ -24,6 +25,10 @@ export class PortalCustomizationComponent {
 
   changeTheme(theme: string) {
     this.selectedTheme = theme;
+  }
+
+  handlePaletteSelected(palette: any): void {
+    this.selectedPalette = palette;
   }
 
   openModal(): void {
@@ -43,6 +48,8 @@ export class PortalCustomizationComponent {
         height: '100%',
         scrollStrategy: this.overlay.scrollStrategies.reposition()
       });
+
+      this.dialogRef.componentInstance.selectedPalette = this.selectedPalette;
 
       this.dialogRef.afterClosed().subscribe(result => {
         // Después de que el modal se haya cerrado ejecutar acciones de ser necesario

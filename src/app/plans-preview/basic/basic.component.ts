@@ -8,6 +8,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./basic.component.scss']
 })
 export class BasicComponent {
+  selectedPalette: any;
+  
   constructor(
     private dialogRef: MatDialogRef<BasicComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any

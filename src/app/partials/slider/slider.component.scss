@@ -28,10 +28,7 @@
     }
 
     .color-palette-content {
-        background-color: map-get(variables.$color-palette-billcentrix, 'gray');
-        padding: 1rem;
         margin-top: 1rem;
-        border-radius: 10px;
         display: flex;
         justify-content: center;
 
@@ -87,12 +84,15 @@
             width: 100%;
 
             .palette {
-                flex: 0 0 calc(100% / 3);
-                max-width: calc(100% / 3);
+                flex: 0 0 calc(100% / 3.1);
+                max-width: calc(100% / 3.1);
                 transition: transform 0.3s ease-in-out;
-                padding: 0 10px;
+                padding: 1rem;
+                border-radius: 10px;
+                margin: 0.2rem;
                 text-align: center;
                 opacity: 0.7;
+                background-color: map-get(variables.$color-palette-billcentrix, 'gray');
 
                 @media (max-width: 707px) {
                     flex-basis: 50%;

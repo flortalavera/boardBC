@@ -16,8 +16,8 @@
                     <p class="text-right">Preview</p>
                   </div>
                   <div class="round-checkbox">
-                    <input type="checkbox" id="myCheckbox">
-                  </div>
+                    <input type="checkbox" [name]="'paletteCheckbox'" id="{{ 'checkbox-' + i }}" [(ngModel)]="palette.selected" (change)="selectPalette(palette)">
+                  </div>                  
                 </div>
               </div>
             </ng-container>
