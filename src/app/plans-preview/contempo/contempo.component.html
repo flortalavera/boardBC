@@ -2,7 +2,7 @@
     <div class="header">
         <img src="../../../assets/icons/ver.png" alt="icono vista previa">
         <p>Vista previa</p>
-        <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close" >
+        <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close">
     </div>
     <div class="main-content">
         <div class="background">
@@ -12,10 +12,18 @@
                     <h3>Logo</h3>
                 </div>
                 <div class="other-options-menu">
-                    <a href=""><h3>Inicio +</h3></a>
-                    <a href=""><h3>Precios</h3></a>
-                    <a href=""><h3>Beneficios</h3></a>
-                    <a href=""><h3>Contacto</h3></a>
+                    <a href="">
+                        <h3>Inicio +</h3>
+                    </a>
+                    <a href="">
+                        <h3>Precios</h3>
+                    </a>
+                    <a href="">
+                        <h3>Beneficios</h3>
+                    </a>
+                    <a href="">
+                        <h3>Contacto</h3>
+                    </a>
                 </div>
                 <div class="burguer-menu">
                     <app-menu-preview></app-menu-preview>
@@ -24,7 +32,8 @@
             <div class="main-image">
                 <div class="text">
                     <h1>Título de Página</h1>
-                    <p>Sed ut perspiciatis unde omnis iste natus  sit voluptatem accusantium doloremque laudantium, totam.</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium,
+                        totam.</p>
                     <button>Button</button>
                 </div>
                 <div class="image-right">
@@ -36,7 +45,9 @@
             <div class="plans">
                 <h1>Título de planes</h1>
                 <p>PRECIOS</p>
-                <app-plan-contempo></app-plan-contempo>
+                <div>
+                    <app-plan-contempo></app-plan-contempo>
+                </div>
             </div>
         </div>
         <div class="banner-content">

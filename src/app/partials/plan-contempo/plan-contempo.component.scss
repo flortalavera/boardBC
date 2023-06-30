@@ -3,15 +3,27 @@
 @use '../../design-system/_base';
 @use '../../design-system/_base-preview';
 @use '../../design-system/_plan-base';
+@import '../../design-system/_mixins.scss';
+
 
 .preview {
     border-radius: 2.5rem;
     margin-top: 5rem;
     overflow: visible;
 
+    @include responsive-width(1036px, 14rem);
+
+    @media (max-width: 1036px) {
+        margin-top: 3rem;
+    }
+
     .header {
         position: relative;
         margin-bottom: 15rem;
+
+        @media (max-width: 1036px) {
+            margin-bottom: 11rem;
+        }
 
         h1 {
             color: map-get(variables.$color-palette-billcentrix, 'primary');
@@ -26,16 +38,44 @@
             height: 15rem;
             border-radius: 50%;
 
+            @media (max-width: 1036px) {
+                width: 12rem;
+                height: 12rem;
+            }
+
             &.plan-1 {
                 background: linear-gradient(to bottom, #60FFEC, #2491EB);
+
+                img{
+                    height: 15rem;
+
+                    @include responsive-height(1036px, 9rem);
+                    @media (max-width: 1036px) {
+                        margin-top: 1rem;
+                    }
+                }
             }
 
             &.plan-2 {
                 background: linear-gradient(to bottom, #FFE9F3, #FFFFFF);
+
+                img{
+                    @include responsive-width(1036px, 10rem);
+                    @media (max-width: 1036px) {
+                        margin-top: 1rem;
+                    }
+                }
             }
 
             &.plan-3 {
                 background: linear-gradient(to bottom, #EEF0FF, #FFFFFF);
+                
+                img{
+                    @include responsive-width(1036px, 7rem);
+                    @media (max-width: 1036px) {
+                        margin-top: 1rem;
+                    }
+                }
             }
         }
 
@@ -49,11 +89,24 @@
         font-size: map-get(variables.$font-sizes, 'big-title');
         font-weight: 700;
         padding: 1rem 0;
+
+        @media (max-width: 1036px) {
+            font-size: 3rem;
+            padding: 0;
+        }
     }
 
-    .including p{
-        color: map-get(variables.$color-palette-billcentrix, 'navy');
-        padding: 0 2rem;
+    .including {
+        padding: 1rem 0;
+
+        p{
+            color: map-get(variables.$color-palette-billcentrix, 'navy');
+            padding: 0;
+
+            @media (max-width: 1036px) {
+                font-size: 0.8rem;
+            }
+        }
     }
 
     .select{
@@ -61,6 +114,11 @@
             width: 8rem;
             background-color: map-get(variables.$color-palette-billcentrix, 'primary');
             color: #fff;
+
+            @media (max-width: 1036px) {
+                width: 6rem;
+                height: 2rem;
+            }
         }
     }
 }

@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-plan-contempo',
   templateUrl: './plan-contempo.component.html',
   styleUrls: ['./plan-contempo.component.scss']
 })
-export class PlanContempoComponent {
+export class PlanContempoComponent implements OnInit {
   plans: any = {};
+  currentIndex = 0;
+  visiblePlans: any[] = [];
 
   ngOnInit() {
     this.plans = {
@@ -18,5 +20,8 @@ export class PlanContempoComponent {
         'assets/images/botellasx2.png'
       ]
     };
+
+
   }
+
 }

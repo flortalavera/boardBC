@@ -4,15 +4,14 @@
 @use '../../design-system/base-preview';
 @import '../../design-system/_mixins.scss';
 
-body{
-    .main-content{
-        .background{
+body {
+    .main-content {
+        .background {
             height: 35rem;
             background-image: url('../../../assets/images/Slide\ Background.png');
             background-size: 80%;
             background-repeat: no-repeat;
 
-            
             @include responsive-height(1233px, 29rem);
             @include responsive-height(1103px, 25rem);
             @include responsive-height(981px, 22rem);
@@ -20,8 +19,8 @@ body{
             @include responsive-height(728px, 18rem);
             @include responsive-height(671px, 15rem);
             @include responsive-height(449px, 14rem);
-    
-            .navbar{
+
+            .navbar {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 padding-top: 1rem;
@@ -33,22 +32,22 @@ body{
                 @media (max-width: 430px) {
                     padding-top: 0;
                 }
-    
-                .logo{
+
+                .logo {
                     padding-left: 2rem;
 
                     @media (max-width: 663px) {
-                        img{
+                        img {
                             width: 1.5rem;
                         }
 
-                        h3{
+                        h3 {
                             font-size: 1rem;
                         }
                     }
                 }
-    
-                .other-options-menu{
+
+                .other-options-menu {
                     display: flex;
                     justify-content: space-around;
 
@@ -59,19 +58,19 @@ body{
 
                 .burguer-menu {
                     display: none;
-    
+
                     @media (max-width: 896px) {
                         display: flex;
                         justify-content: flex-end;
                     }
                 }
             }
-    
-            .main-image{
+
+            .main-image {
                 display: grid;
                 grid-template-columns: 2fr 1fr;
-    
-                .text{
+
+                .text {
                     padding: 5rem 1rem 5rem 5rem;
 
                     @media (max-width: 947px) {
@@ -85,14 +84,14 @@ body{
                     @media (max-width: 669px) {
                         padding: 1rem 0 5rem 2rem;
                     }
-    
-                    h1{
+
+                    h1 {
                         color: map-get(variables.$color-palette-billcentrix, 'primary');
                         font-weight: 400;
                         font-family: 'Times New Roman', Times, serif;
                         font-size: map-get(variables.$font-sizes, 'big-title');
 
-                        @media (max-width: 1190px){
+                        @media (max-width: 1190px) {
                             font-size: map-get(variables.$font-sizes, 'title');
                         }
 
@@ -109,8 +108,8 @@ body{
                             font-size: map-get(variables.$font-sizes, 'subtext');
                         }
                     }
-    
-                    p{
+
+                    p {
                         color: map-get(variables.$color-palette-billcentrix, 'navy');
                         padding: 0 6rem 1rem 0;
                         font-size: 0.8rem;
@@ -133,8 +132,8 @@ body{
                             padding: 0 1rem 1rem 0;
                         }
                     }
-    
-                    button{
+
+                    button {
                         width: 8rem;
                         background-color: map-get(variables.$color-palette-billcentrix, 'primary');
                         color: #fff;
@@ -153,9 +152,9 @@ body{
 
                     }
                 }
-    
-                .image-right{
-                    img{
+
+                .image-right {
+                    img {
                         width: 28rem;
 
                         @include responsive-width(1267px, 25rem);
@@ -169,24 +168,24 @@ body{
                 }
             }
         }
-    
-        .background2{
+
+        .background2 {
             height: 55rem;
             background-image: url('../../../assets/images/Background\ Bubble.png');
             background-repeat: no-repeat;
             background-position: right;
             background-size: 70% auto;
-    
-            .plans{
+
+            .plans {
                 text-align: center;
-    
-                h1{
+
+                h1 {
                     color: map-get(variables.$color-palette-billcentrix, 'primary');
                     font-weight: 400;
                     font-family: 'Times New Roman', Times, serif;
                     font-size: map-get(variables.$font-sizes, 'big-title');
 
-                    @media (max-width: 1190px){
+                    @media (max-width: 1190px) {
                         font-size: map-get(variables.$font-sizes, 'title');
                     }
 
@@ -203,8 +202,8 @@ body{
                         font-size: map-get(variables.$font-sizes, 'subtext');
                     }
                 }
-    
-                p{
+
+                p {
                     color: map-get(variables.$color-palette-billcentrix, 'primary');
 
                     @media (max-width: 625px) {
@@ -215,16 +214,18 @@ body{
                         font-size: 0.5rem;
                     }
                 }
-    
-                app-plan-contempo{
+
+                app-plan-contempo {
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+
                 }
+
             }
         }
-    
-        .banner-content{
+
+        .banner-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding: 0 10rem;
@@ -249,27 +250,27 @@ body{
             @media (max-width: 430px) {
                 padding: 0 1rem;
             }
-    
-            .image{
-                img{
+
+            .image {
+                img {
                     width: 90%;
 
                     @include responsive-width(789px, 80%);
                     @include responsive-width(451px, 100%);
                 }
             }
-    
-            .image{
+
+            .image {
                 display: flex;
                 align-items: center;
             }
-    
-            .text{
+
+            .text {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-    
-                h1{
+
+                h1 {
                     color: map-get(variables.$color-palette-billcentrix, 'primary');
                     padding-bottom: 1rem;
                     font-size: map-get(variables.$font-sizes, 'title');
@@ -288,8 +289,8 @@ body{
                         font-size: map-get(variables.$font-sizes, 'subtext');
                     }
                 }
-    
-                p{
+
+                p {
                     color: map-get(variables.$color-palette-billcentrix, 'navy');
 
                     @media (max-width: 906px) {
@@ -307,8 +308,8 @@ body{
                 }
             }
         }
-    
-        .footer{
+
+        .footer {
             padding: 3rem;
 
             @media (max-width: 589px) {
@@ -319,13 +320,13 @@ body{
                 padding: 1rem;
                 margin-top: 2rem;
             }
-    
-            h2{
+
+            h2 {
                 color: map-get(variables.$color-palette-billcentrix, 'primary');
                 font-weight: 300;
                 margin-left: 1.5rem;
 
-                
+
                 @media (max-width: 757px) {
                     font-size: 1.3rem;
                 }
@@ -342,22 +343,22 @@ body{
                     font-size: 0.7rem;
                 }
             }
-    
-            hr{
+
+            hr {
                 background-color: map-get(variables.$color-palette-billcentrix, 'primary');
                 height: 4px;
                 margin: 1rem 0;
             }
-    
-            .mail{
+
+            .mail {
                 display: flex;
                 align-items: center;
-    
-                h2{
+
+                h2 {
                     display: inline;
                     margin-left: 1.5rem;
 
-                    
+
                     @media (max-width: 757px) {
                         margin-left: 1rem;
                     }
@@ -367,8 +368,8 @@ body{
                         margin-left: 0.5rem;
                     }
                 }
-    
-                img{
+
+                img {
                     margin-left: 2rem;
                     width: 2rem;
 
@@ -381,13 +382,13 @@ body{
                     }
                 }
             }
-    
+
         }
     }
 
-    .options-buttons{
+    .options-buttons {
 
-        button{
+        button {
             @media (max-width: 511px) {
                 width: 7rem;
             }

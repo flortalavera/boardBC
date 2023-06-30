@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent {
+export class SliderComponent implements OnInit {
   palettes: any[] = [];
   currentIndex: number = 0;
   visiblePalettes: any[] = [];
 
   ngOnInit() {
-    // Aquí debes llenar el arreglo 'paletas' con las paletas de colores que tienes disponibles
-    // Puedes cargar las imágenes y los títulos de las paletas desde algún servicio o archivo de datos
+
     this.palettes = [
       { image: '../../../assets/images/color-palette/billcentrix.png', title: 'Billcentrix' },
       { image: '../../../assets/images/color-palette/moderna.png', title: 'Moderna' },
