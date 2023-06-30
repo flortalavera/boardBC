@@ -4,6 +4,12 @@
     }
 }
 
+@mixin responsive-height($max-width, $height) {
+    @media (max-width: $max-width) {
+        height: $height;
+    }
+}
+
 @mixin responsive-padding($max-width, $padding) {
     @media (max-width: $max-width) {
         padding: $padding;

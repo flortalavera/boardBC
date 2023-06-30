@@ -268,7 +268,12 @@ body {
             @media (max-width: 669px) {
                 gap: 1rem;
                 grid-template-columns: 1fr 2fr;
+                padding: 0 2rem 1rem 1rem;
             }
+            @media (max-width: 625px) {
+                padding: 0 2rem 1rem 2rem;
+            }
+            
 
             p {
                 color: map-get(variables.$color-palette-billcentrix, 'navy');
@@ -276,6 +281,10 @@ body {
 
                 @media (max-width: 947px) {
                     font-size: 0.6rem;
+                }
+
+                @media (max-width: 478px) {
+                    font-size: 0.4rem;
                 }
             }
 
@@ -350,6 +359,10 @@ body {
 
                     @media (max-width: 947px) {
                         padding-top: 3rem;
+                    }
+
+                    @media (max-width: 625px) {
+                        padding-top: 2rem;
                     }
                 }
             }

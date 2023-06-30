@@ -2,6 +2,7 @@
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
 @use '../../design-system/base-preview';
+@import '../../design-system/_mixins.scss';
 
 body{
     .main-content{
@@ -10,19 +11,59 @@ body{
             background-image: url('../../../assets/images/Slide\ Background.png');
             background-size: 80%;
             background-repeat: no-repeat;
+
+            
+            @include responsive-height(1233px, 29rem);
+            @include responsive-height(1103px, 25rem);
+            @include responsive-height(981px, 22rem);
+            @include responsive-height(906px, 20rem);
+            @include responsive-height(728px, 18rem);
+            @include responsive-height(671px, 15rem);
+            @include responsive-height(449px, 14rem);
     
             .navbar{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 padding-top: 1rem;
+
+                @media (max-width: 817px) {
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: 430px) {
+                    padding-top: 0;
+                }
     
                 .logo{
                     padding-left: 2rem;
+
+                    @media (max-width: 663px) {
+                        img{
+                            width: 1.5rem;
+                        }
+
+                        h3{
+                            font-size: 1rem;
+                        }
+                    }
                 }
     
                 .other-options-menu{
                     display: flex;
                     justify-content: space-around;
+
+                    @media (max-width: 896px) {
+                        display: none;
+                    }
+                }
+
+                .burguer-menu {
+                    display: none;
+    
+                    @media (max-width: 896px) {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
                 }
             }
     
@@ -31,30 +72,99 @@ body{
                 grid-template-columns: 2fr 1fr;
     
                 .text{
-                    padding: 5rem;
+                    padding: 5rem 1rem 5rem 5rem;
+
+                    @media (max-width: 947px) {
+                        padding: 3rem 1rem 5rem 4rem;
+                    }
+
+                    @media (max-width: 906px) {
+                        padding: 2rem 1rem 5rem 3rem;
+                    }
+
+                    @media (max-width: 669px) {
+                        padding: 1rem 0 5rem 2rem;
+                    }
     
                     h1{
                         color: map-get(variables.$color-palette-billcentrix, 'primary');
                         font-weight: 400;
                         font-family: 'Times New Roman', Times, serif;
                         font-size: map-get(variables.$font-sizes, 'big-title');
+
+                        @media (max-width: 1190px){
+                            font-size: map-get(variables.$font-sizes, 'title');
+                        }
+
+                        @media (max-width: 906px) {
+                            font-size: map-get(variables.$font-sizes, 'subtitle');
+                            margin-bottom: 1rem;
+                        }
+
+                        @media (max-width: 625px) {
+                            font-size: map-get(variables.$font-sizes, 'text');
+                        }
+
+                        @media (max-width: 467px) {
+                            font-size: map-get(variables.$font-sizes, 'subtext');
+                        }
                     }
     
                     p{
                         color: map-get(variables.$color-palette-billcentrix, 'navy');
-                        padding: 0 10rem 1rem 0;
+                        padding: 0 6rem 1rem 0;
+                        font-size: 0.8rem;
+
+                        @media (max-width: 906px) {
+                            font-size: 0.6rem;
+                        }
+
+                        @media (max-width: 789px) {
+                            padding: 0 4rem 1rem 0;
+                        }
+
+                        @media (max-width: 625px) {
+                            padding: 0 3rem 1rem 0;
+                            font-size: 0.5rem;
+                        }
+
+                        @media (max-width: 467px) {
+                            font-size: 0.4rem;
+                            padding: 0 1rem 1rem 0;
+                        }
                     }
     
                     button{
                         width: 8rem;
                         background-color: map-get(variables.$color-palette-billcentrix, 'primary');
                         color: #fff;
+
+                        @include responsive-width(906px, 6rem);
+
+                        @media (max-width: 669px) {
+                            margin-top: 0;
+                            height: 1.5rem;
+                            font-size: 0.5rem;
+                        }
+
+                        @include responsive-width(625px, 5rem);
+                        @include responsive-width(545px, 4rem);
+                        @include responsive-width(467px, 3rem);
+
                     }
                 }
     
                 .image-right{
                     img{
                         width: 28rem;
+
+                        @include responsive-width(1267px, 25rem);
+                        @include responsive-width(1190px, 22rem);
+                        @include responsive-width(1030px, 19rem);
+                        @include responsive-width(906px, 16rem);
+                        @include responsive-width(751px, 13rem);
+                        @include responsive-width(545px, 10rem);
+                        @include responsive-width(430px, 8rem);
                     }
                 }
             }
@@ -75,10 +185,35 @@ body{
                     font-weight: 400;
                     font-family: 'Times New Roman', Times, serif;
                     font-size: map-get(variables.$font-sizes, 'big-title');
+
+                    @media (max-width: 1190px){
+                        font-size: map-get(variables.$font-sizes, 'title');
+                    }
+
+                    @media (max-width: 906px) {
+                        font-size: map-get(variables.$font-sizes, 'subtitle');
+                        margin-bottom: 0.5rem;
+                    }
+
+                    @media (max-width: 625px) {
+                        font-size: map-get(variables.$font-sizes, 'text');
+                    }
+
+                    @media (max-width: 467px) {
+                        font-size: map-get(variables.$font-sizes, 'subtext');
+                    }
                 }
     
                 p{
                     color: map-get(variables.$color-palette-billcentrix, 'primary');
+
+                    @media (max-width: 625px) {
+                        font-size: 0.8rem;
+                    }
+
+                    @media (max-width: 467px) {
+                        font-size: 0.5rem;
+                    }
                 }
     
                 app-plan-contempo{
@@ -94,10 +229,33 @@ body{
             grid-template-columns: 1fr 1fr;
             padding: 0 10rem;
             margin-top: -6rem;
+
+            @media (max-width: 1230px) {
+                padding: 0 7rem;
+            }
+
+            @media (max-width: 1107px) {
+                padding: 0 5rem;
+            }
+
+            @media (max-width: 1024px) {
+                padding: 0 3rem;
+            }
+
+            @media (max-width: 946px) {
+                padding: 0 2rem;
+            }
+
+            @media (max-width: 430px) {
+                padding: 0 1rem;
+            }
     
             .image{
                 img{
                     width: 90%;
+
+                    @include responsive-width(789px, 80%);
+                    @include responsive-width(451px, 100%);
                 }
             }
     
@@ -117,21 +275,72 @@ body{
                     font-size: map-get(variables.$font-sizes, 'title');
                     font-family: 'Times New Roman', Times, serif;
                     font-weight: 400;
+
+                    @media (max-width: 906px) {
+                        font-size: map-get(variables.$font-sizes, 'subtitle');
+                    }
+
+                    @media (max-width: 625px) {
+                        font-size: map-get(variables.$font-sizes, 'text');
+                    }
+
+                    @media (max-width: 467px) {
+                        font-size: map-get(variables.$font-sizes, 'subtext');
+                    }
                 }
     
                 p{
                     color: map-get(variables.$color-palette-billcentrix, 'navy');
+
+                    @media (max-width: 906px) {
+                        font-size: 0.6rem;
+                    }
+
+
+                    @media (max-width: 625px) {
+                        font-size: 0.5rem;
+                    }
+
+                    @media (max-width: 467px) {
+                        font-size: 0.4rem;
+                    }
                 }
             }
         }
     
         .footer{
             padding: 3rem;
+
+            @media (max-width: 589px) {
+                padding: 2rem;
+            }
+
+            @media (max-width: 545px) {
+                padding: 1rem;
+                margin-top: 2rem;
+            }
     
             h2{
                 color: map-get(variables.$color-palette-billcentrix, 'primary');
                 font-weight: 300;
-                margin-left: 10rem;
+                margin-left: 1.5rem;
+
+                
+                @media (max-width: 757px) {
+                    font-size: 1.3rem;
+                }
+
+                @media (max-width: 545px) {
+                    font-size: 1rem;
+                }
+
+                @media (max-width: 440px) {
+                    margin-left: 0.5rem;
+                }
+
+                @media (max-width: 430px) {
+                    font-size: 0.7rem;
+                }
             }
     
             hr{
@@ -147,11 +356,29 @@ body{
                 h2{
                     display: inline;
                     margin-left: 1.5rem;
+
+                    
+                    @media (max-width: 757px) {
+                        margin-left: 1rem;
+                    }
+
+                    @media (max-width: 430px) {
+                        font-size: 0.7rem;
+                        margin-left: 0.5rem;
+                    }
                 }
     
                 img{
-                    margin-left: 10rem;
+                    margin-left: 2rem;
                     width: 2rem;
+
+                    @media (max-width: 757px) {
+                        width: 1.5rem;
+                    }
+
+                    @media (max-width: 440px) {
+                        margin-left: 0.5rem;
+                    }
                 }
             }
     
@@ -159,6 +386,11 @@ body{
     }
 
     .options-buttons{
-        padding: 0 4rem;
+
+        button{
+            @media (max-width: 511px) {
+                width: 7rem;
+            }
+        }
     }
 }
