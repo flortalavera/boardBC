@@ -1,16 +1,28 @@
-<div class="preview" *ngFor="let plan of plans.option; index as i">
-    <div class="header" >
-        <button *ngIf="plans.option[i] === 'OPCIÓN 2'">Popular</button>
-        <p>{{ plans.option[i] }}</p>
-    </div>
-    <h1 class="big-number">{{ plans.price[i] }}</h1>
-    <div class="including">
-        <p>Descripción del plan, esta información se edita en el siguiente paso</p>
-    </div>
-    <div class="select">
-        <p>Seleccionar</p>
-        <div class="round-checkbox">
-            <input type="checkbox" id="myCheckbox">
+<div class="plan-practical">
+    <div class="plan-practical-content">
+        <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
+            <div class="arrow-left"></div>
+        </div>
+        <div class="carousel-container">
+            <div class="preview" *ngFor="let plan of visiblePlans; let i = index">
+                <div class="header" >
+                    <button *ngIf="plan.option === 'OPCIÓN 2'">Popular</button>
+                    <p>{{ plan.option }}</p>
+                </div>
+                <h1 class="big-number">{{ plan.price }}</h1>
+                <div class="including">
+                    <p>Descripción del plan, esta información se edita en el siguiente paso</p>
+                </div>
+                <div class="select">
+                    <p>Seleccionar</p>
+                    <div class="round-checkbox">
+                        <input type="checkbox" id="myCheckbox">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === plans.length - 1 }"
+            (click)="next()">
+            <div class="arrow-right"></div>
         </div>
     </div>
 </div>

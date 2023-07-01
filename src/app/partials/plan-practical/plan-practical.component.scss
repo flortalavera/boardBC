@@ -3,47 +3,133 @@
 @use '../../design-system/_base';
 @use '../../design-system/_plan-base';
 
-.preview {
-    height: max-content;
+.plan-practical{
+    background-color: transparent;
+    padding: 1.5rem 2.3rem;
     border-radius: 10px;
-    padding: 2rem 1.8rem;
-    border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
-    align-items: flex-start;
-    text-align: left;
+    margin-bottom: 1rem;
+    color: map-get(variables.$color-palette-billcentrix, 'primary');
+    width: 100%;
 
-    .header {
-        padding-bottom: 3rem;
-        flex-direction: column;
+    @media (max-width: 473px) {
+        padding: 1.5rem;
+    }
 
-        button{
-            color: #fff;
-            background-color: map-get(variables.$color-palette-billcentrix, 'primary');
-            width: 7rem;
-            margin-bottom: 1.5rem;
+    h1 {
+        font-weight: 300;
+
+        @media (max-width: 736px) {
+            font-size: 1.5rem;
         }
     }
 
-    .big-number {
-        font-size: map-get(variables.$font-sizes, 'big-title');
-        padding-bottom: 1rem;
+    p {
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
     }
 
-    .including {
-        padding-bottom: 3rem;
-
-        p {
-            font-weight: 600;
-            font-size: map-get(variables.$font-sizes, 'subtext');
-        }
-    }
-
-    .select{
-        width: 100%;
+    .plan-practical-content{
+        margin-top: 1rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
 
-        p{
-            font-weight: 500;
+        @media (max-width: 452px) {
+            padding: 0.5rem;
+        }
+
+        .carousel-nav-left,
+        .carousel-nav-right {
+            background-color: #ffffff67;
+            width: 2rem;
+            height: 15rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #dcdadac4;
+            }
+        }
+
+        .carousel-nav-left.disabled,
+        .carousel-nav-right.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border: solid map-get(variables.$color-palette-billcentrix, 'primary');
+            ;
+            border-width: 0 5px 5px 0;
+            display: inline-block;
+            padding: 2px;
+
+            &.arrow-left {
+                transform: rotate(135deg);
+            }
+
+            &.arrow-right {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+
+            .preview {
+                height: max-content;
+                border-radius: 10px;
+                padding: 2rem 1.8rem;
+                border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                align-items: flex-start;
+                text-align: left;
+            
+                .header {
+                    padding-bottom: 3rem;
+                    flex-direction: column;
+            
+                    button{
+                        color: #fff;
+                        background-color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        width: 7rem;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            
+                .big-number {
+                    font-size: map-get(variables.$font-sizes, 'big-title');
+                    padding-bottom: 1rem;
+                }
+            
+                .including {
+                    padding-bottom: 3rem;
+            
+                    p {
+                        font-weight: 600;
+                        font-size: map-get(variables.$font-sizes, 'subtext');
+                    }
+                }
+            
+                .select{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+            
+                    p{
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }

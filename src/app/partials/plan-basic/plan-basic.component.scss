@@ -2,21 +2,109 @@
 @use '../../design-system/_variables';
 @use '../../design-system/_plan-base';
 
-.select {
-    button {
-        width: 12rem;
-        height: 2.3rem;
-        border: none;
-        border-radius: 10px;
-        font-weight: 700;
-        background-color: #fff;
-        color: map-get(variables.$color-palette-billcentrix, 'primary');
-        border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+.plan-basic{
+    background-color: transparent;
+    padding: 1.5rem 2.3rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: map-get(variables.$color-palette-billcentrix, 'primary');
+    width: 100%;
+
+    @media (max-width: 473px) {
+        padding: 1.5rem;
     }
-}
 
+    h1 {
+        font-weight: 300;
 
-.plans {
-    display: flex;
-    justify-content: space-between;
+        @media (max-width: 736px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    p {
+        color: map-get(variables.$color-palette-billcentrix, 'navy');
+    }
+
+    .plan-basic-content {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 452px) {
+            padding: 0.5rem;
+        }
+
+        .carousel-nav-left,
+        .carousel-nav-right {
+            background-color: #ffffff67;
+            width: 2rem;
+            height: 15rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #dcdadac4;
+            }
+        }
+
+        .carousel-nav-left.disabled,
+        .carousel-nav-right.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border: solid map-get(variables.$color-palette-billcentrix, 'primary');
+            ;
+            border-width: 0 5px 5px 0;
+            display: inline-block;
+            padding: 2px;
+
+            &.arrow-left {
+                transform: rotate(135deg);
+            }
+
+            &.arrow-right {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+
+            .preview {
+                .select {
+                    button {
+                        width: 12rem;
+                        height: 2.3rem;
+                        border: none;
+                        border-radius: 10px;
+                        font-weight: 700;
+                        background-color: #fff;
+                        color: map-get(variables.$color-palette-billcentrix, 'primary');
+                        border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                    }
+                }
+                
+                .plans {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
 }

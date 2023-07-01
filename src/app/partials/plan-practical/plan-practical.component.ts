@@ -6,12 +6,46 @@ import { Component } from '@angular/core';
   styleUrls: ['./plan-practical.component.scss']
 })
 export class PlanPracticalComponent {
-  plans: any = {};
+  plans: any[] = [];
+  currentIndex = 0;
+  visiblePlans: any[] = [];
 
   ngOnInit() {
-    this.plans = {
-      "price": ['$15', '$25', '$29'],
-      "option": ['OPCIÓN 1', 'OPCIÓN 2', 'OPCIÓN 3']
-    };
+    this.plans = [
+      { price: '$15', option: 'OPCIÓN 1' },
+      { price: '$25', option: 'OPCIÓN 2' },
+      { price: '$29', option: 'OPCIÓN 3' },
+      { price: '$15', option: 'OPCIÓN 1' }
+    ];
+
+    this.updateVisiblePlans();
+
+  }
+
+  previous() {
+    if (this.currentIndex > 0) {
+      if (this.currentIndex >= 3) {
+        this.currentIndex -= 3;
+      } else {
+        this.currentIndex = 0;
+      }
+      this.updateVisiblePlans();
+    }
+  }
+
+  next() {
+    if (this.currentIndex < this.plans.length - 3) {
+      this.currentIndex += 3;
+      if (this.currentIndex >= this.plans.length - 3) {
+        this.currentIndex = this.plans.length - 3;
+      }
+    }
+    this.updateVisiblePlans();
+  }
+
+  updateVisiblePlans() {
+    const start = this.currentIndex;
+    const end = start + 3;
+    this.visiblePlans = this.plans.slice(start, end);
   }
 }

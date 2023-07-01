@@ -1,19 +1,32 @@
-<div class="preview" *ngFor="let plan of plans.title; index as i">
-    <div class="header" >
-        <h1>{{ plans.title[i] }}</h1>
-    </div>
-    <div class="see-photo"></div>
-    <h3>{{ plans.option[i] }}</h3>
-    <h1 class="big-number">$0</h1>
-    <h3>Mensuales</h3>
-    <div class="including">
-        <ul class="dotted-list">
-            <li>Incluye sed ut perspiciatis</li>
-            <li>Sunde omnis iste natus</li>
-            <li>Sed ut perspiciatis unde omnis iste natus sit</li>
-        </ul>
-    </div>
-    <div class="select">
-        <button>Seleccionar</button>
+<div class="plan-basic">
+    <div class="plan-basic-content">
+        <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
+            <div class="arrow-left"></div>
+        </div>
+        <div class="carousel-container">
+            <div class="preview" *ngFor="let plan of visiblePlans; let i = index">
+                <div class="header" >
+                    <h1>{{ plan.title }}</h1>
+                </div>
+                <div class="see-photo"></div>
+                <h3>{{ plan.option }}</h3>
+                <h1 class="big-number">$0</h1>
+                <h3>Mensuales</h3>
+                <div class="including">
+                    <ul class="dotted-list">
+                        <li>Incluye sed ut perspiciatis</li>
+                        <li>Sunde omnis iste natus</li>
+                        <li>Sed ut perspiciatis unde omnis iste natus sit</li>
+                    </ul>
+                </div>
+                <div class="select">
+                    <button>Seleccionar</button>
+                </div>
+            </div>
+            <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === plans.length - 1 }"
+            (click)="next()">
+            <div class="arrow-right"></div>
+        </div>
+        </div>
     </div>
 </div>

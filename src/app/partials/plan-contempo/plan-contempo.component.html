@@ -1,19 +1,32 @@
-<div class="preview" *ngFor="let plan of plans.title; index as i">
-    <div class="header" >
-        <div class="circle" [ngClass]="{
-            'plan-1': plan === 'PLAN 1',
-            'plan-2': plan === 'PLAN 2',
-            'plan-3': plan === 'PLAN 3'
-          }">
-            <img src="{{ plans.image[i] }}" alt="imagen planes">
+<div class="plan-contempo">
+    <div class="plan-contempo-content">
+        <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
+            <div class="arrow-left"></div>
         </div>
-    </div>
-    <p>{{ plans.title[i] }}</p>
-    <h1 class="big-number">{{ plans.price[i] }}</h1>
-    <div class="including">
-        <p>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis</p>
-    </div>
-    <div class="select">
-        <button>Button</button>
+        <div class="carousel-container">
+            <div class="preview" *ngFor="let plan of visiblePlans; let i = index">
+                <div class="header" >
+                    <div class="circle" [ngClass]="{
+                        'plan-1': plan.title === 'PLAN 1',
+                        'plan-2': plan.title === 'PLAN 2',
+                        'plan-3': plan.title === 'PLAN 3'
+                      }">
+                        <img src="{{ plan.image }}" alt="imagen planes">
+                    </div>
+                </div>
+                <p>{{ plan.title }}</p>
+                <h1 class="big-number">{{ plan.price }}</h1>
+                <div class="including">
+                    <p>Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla turpis</p>
+                </div>
+                <div class="select">
+                    <button>Button</button>
+                </div>
+            </div>
+          </div>
+        <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === plans.length - 1 }"
+            (click)="next()">
+            <div class="arrow-right"></div>
+        </div>
     </div>
 </div>
