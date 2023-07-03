@@ -2,6 +2,7 @@
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
 @use '../../design-system/_mobile-styles';
+@import '../../design-system/_mixins.scss';
 
 .color-palette {
     background-color: #fff;
@@ -18,9 +19,7 @@
     h1 {
         font-weight: 300;
 
-        @media (max-width: 736px) {
-            font-size: 1.5rem;
-        }
+        @include responsive-font-size(736px, 1.5rem);
     }
 
     p {

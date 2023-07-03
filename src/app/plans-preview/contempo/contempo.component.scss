@@ -176,6 +176,9 @@ body {
             background-position: right;
             background-size: 70% auto;
 
+            @include responsive-height(1036px, 45rem);
+            @include responsive-height(514px, 40rem);
+
             .plans {
                 text-align: center;
 
@@ -206,13 +209,9 @@ body {
                 p {
                     color: map-get(variables.$color-palette-billcentrix, 'primary');
 
-                    @media (max-width: 625px) {
-                        font-size: 0.8rem;
-                    }
+                    @include responsive-font-size(625px, 0.8rem);
+                    @include responsive-font-size(467px, 0.5rem);
 
-                    @media (max-width: 467px) {
-                        font-size: 0.5rem;
-                    }
                 }
 
                 app-plan-contempo {
@@ -293,18 +292,9 @@ body {
                 p {
                     color: map-get(variables.$color-palette-billcentrix, 'navy');
 
-                    @media (max-width: 906px) {
-                        font-size: 0.6rem;
-                    }
-
-
-                    @media (max-width: 625px) {
-                        font-size: 0.5rem;
-                    }
-
-                    @media (max-width: 467px) {
-                        font-size: 0.4rem;
-                    }
+                    @include responsive-font-size(906px, 0.6rem);
+                    @include responsive-font-size(625px, 0.5rem);
+                    @include responsive-font-size(467px, 0.4rem);
                 }
             }
         }
@@ -326,22 +316,14 @@ body {
                 font-weight: 300;
                 margin-left: 1.5rem;
 
-
-                @media (max-width: 757px) {
-                    font-size: 1.3rem;
-                }
-
-                @media (max-width: 545px) {
-                    font-size: 1rem;
-                }
+                @include responsive-font-size(757px, 1.3rem);
+                @include responsive-font-size(545px, 1rem);
 
                 @media (max-width: 440px) {
                     margin-left: 0.5rem;
                 }
 
-                @media (max-width: 430px) {
-                    font-size: 0.7rem;
-                }
+                @include responsive-font-size(430px, 0.7rem);
             }
 
             hr {
@@ -373,9 +355,7 @@ body {
                     margin-left: 2rem;
                     width: 2rem;
 
-                    @media (max-width: 757px) {
-                        width: 1.5rem;
-                    }
+                    @include responsive-width(757px, 1.5rem);
 
                     @media (max-width: 440px) {
                         margin-left: 0.5rem;
@@ -389,9 +369,7 @@ body {
     .options-buttons {
 
         button {
-            @media (max-width: 511px) {
-                width: 7rem;
-            }
+            @include responsive-width(511px, 7rem);
         }
     }
 }

@@ -132,6 +132,10 @@ body {
 
             p {
                 padding: 2rem;
+
+                @media (max-width: 1202px) {
+                    padding-bottom: 0;
+                }
             }
 
             app-plan-practical {
@@ -192,13 +196,8 @@ body {
                     }
 
                     p {
-                        @media (max-width: 677px) {
-                            font-size: 0.7rem;
-                        }
-
-                        @media (max-width: 507px) {
-                            font-size: 0.5rem;
-                        }
+                        @include responsive-font-size(677px, 0.7rem);
+                        @include responsive-font-size(507px, 0.5rem);
                     }
                 }
 
@@ -239,16 +238,11 @@ body {
                     img {
                         width: 2.2rem;
 
-                        @media (max-width: 560px) {
-                            width: 1.8rem;
-                        }
+                        @include responsive-width(560px, 1.8rem);
                     }
 
                     p {
-
-                        @media (max-width: 560px) {
-                            font-size: 0.5rem;
-                        }
+                        @include responsive-font-size(560px, 0.5rem);
                     }
                 }
             }
@@ -279,13 +273,8 @@ body {
                 color: map-get(variables.$color-palette-billcentrix, 'navy');
                 font-size: 0.8rem;
 
-                @media (max-width: 947px) {
-                    font-size: 0.6rem;
-                }
-
-                @media (max-width: 478px) {
-                    font-size: 0.4rem;
-                }
+                @include responsive-font-size(947px, 0.6rem);
+                @include responsive-font-size(478px, 0.4rem);
             }
 
             .left {
@@ -296,13 +285,8 @@ body {
                     font-weight: 400;
                     margin-bottom: 0.8rem;
 
-                    @media (max-width: 947px) {
-                        font-size: 1.5rem;
-                    }
-
-                    @media (max-width: 625px) {
-                        font-size: 1rem;
-                    }
+                    @include responsive-font-size(947px, 1.5rem);
+                    @include responsive-font-size(625px, 1rem);
                 }
 
                 @media (max-width: 625px) {
@@ -374,9 +358,7 @@ body {
     .options-buttons{
 
         button{
-            @media (max-width: 511px) {
-                width: 7rem;
-            }
+            @include responsive-font-size(511px, 7rem);
         }
     }
 }

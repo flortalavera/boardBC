@@ -1,27 +1,17 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_plan-base';
+@import '../../design-system/_mixins.scss';
 
 .preview{
     width: fit-content;
     text-align: left;
     width: 20rem;
 
-    @media (max-width: 1371px) {
-        width: 20rem;
-    }
-
-    @media (max-width: 1164px) {
-        width: 17rem;
-    }
-
-    @media (max-width: 942px) {
-        width: 15rem;
-    }
-
-    @media (max-width: 609px) {
-        width: 19rem;
-    }
+    @include responsive-width(1371px, 20rem);
+    @include responsive-width(1164px, 17rem);
+    @include responsive-width(942px, 15rem);
+    @include responsive-width(609px, 19rem);
 
     .header{
         img{

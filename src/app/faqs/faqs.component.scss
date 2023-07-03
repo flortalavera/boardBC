@@ -2,6 +2,7 @@
 @use '../design-system/_variables';
 @use '../design-system/_base';
 @use '../design-system/_mobile-styles';
+@import '../design-system/_mixins.scss';
 
 body {
     .grid-overlay {
@@ -63,13 +64,9 @@ body {
                     font-weight: 300;
                     text-align: left;
 
-                    @media (max-width: 871px) {
-                        font-size: 1.7rem;
-                    }
+                    @include responsive-font-size(871px, 1.7rem);
+                    @include responsive-font-size(773px, 1.3rem);
 
-                    @media (max-width: 773px) {
-                        font-size: 1.3rem;
-                    }
                 }
             }
 
@@ -110,13 +107,9 @@ body {
                 padding-bottom: 1rem;
                 font-weight: 300;
 
-                @media (max-width: 602px) {
-                    font-size: 1.5rem;
-                }
+                @include responsive-font-size(602px, 1.5rem);
+                @include responsive-font-size(518px, 1.2rem);
 
-                @media (max-width: 518px) {
-                    font-size: 1.2rem;
-                }
             }
 
             .content-info {
@@ -183,33 +176,14 @@ body {
                         font-size: 6rem;
                         font-weight: 700;
 
-                        @media (max-width: 1345px) {
-                            font-size: 5rem;
-                        }
+                        @include responsive-font-size(1345px, 5rem);
+                        @include responsive-font-size(1224px, 4rem);
+                        @include responsive-font-size(1103px, 3rem);
+                        @include responsive-font-size(753px, 2rem);
+                        @include responsive-font-size(633px, 1.8rem);
+                        @include responsive-font-size(451px, 1.5rem);
+                        @include responsive-font-size(424px, 1.2rem);
 
-                        @media (max-width: 1224px) {
-                            font-size: 4rem;
-                        }
-
-                        @media (max-width: 1103px) {
-                            font-size: 3rem;
-                        }
-
-                        @media (max-width: 753px) {
-                            font-size: 2rem;
-                        }
-
-                        @media (max-width: 633px) {
-                            font-size: 1.8rem;
-                        }
-
-                        @media (max-width: 451px) {
-                            font-size: 1.5rem;
-                        }
-
-                        @media (max-width: 424px) {
-                            font-size: 1.2rem;
-                        }
                     }
                 }
             }

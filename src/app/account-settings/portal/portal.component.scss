@@ -2,6 +2,7 @@
 @use '../../design-system/_variables';
 @use '../../design-system/_base';
 @use '../../design-system/_mobile-styles';
+@import '../../design-system/_mixins.scss';
 
 .create-portal {
     margin-top: 1rem;
@@ -88,6 +89,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: center;
             }
 
             .line{
@@ -156,30 +158,18 @@
                     }
                 }
 
-                @media (max-width: 1304px) {
-                    width: 20rem;
-                }
+                @include responsive-width(1304px, 20rem);
 
                 @media (max-width: 1187px) {
                     padding: 2rem 1rem;
                     width: 18rem;
                 }
 
-                @media (max-width: 1074px) {
-                    width: 16rem;
-                }
+                @include responsive-width(1074px, 16rem);
+                @include responsive-width(955px, 20rem);
+                @include responsive-width(488px, 18rem);
+                @include responsive-width(432px, 16rem);
 
-                @media (max-width: 955px){
-                    width: 20rem;
-                }
-
-                @media (max-width: 488px){
-                    width: 18rem;
-                }
-
-                @media (max-width: 432px){
-                    width: 16rem;
-                }
 
                 .preview {
                     display: flex;

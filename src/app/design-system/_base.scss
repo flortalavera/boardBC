@@ -3,7 +3,7 @@
 body {
     background-color: map-get($color-palette-billcentrix, 'navy');
     background-image: url('../../assets/images/GRID.png');
-    background-size: 70%;
+    background-size: 70rem;
     height: max-content;
 
     .grid-overlay {

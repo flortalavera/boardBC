@@ -1,6 +1,7 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_plan-base';
+@import '../../design-system/_mixins.scss';
 
 .plan-basic{
     background-color: transparent;
@@ -11,7 +12,7 @@
     width: 100%;
 
     @media (max-width: 473px) {
-        padding: 1.5rem;
+        padding: 0 0 1.5rem 0;
     }
 
     h1 {
@@ -86,6 +87,30 @@
             align-items: center;
 
             .preview {
+
+                .see-photo{
+                    @media (max-width: 511px) {
+                        height: 6rem;
+                    }
+                }
+
+                .big-number{
+                    @media (max-width: 511px) {
+                        font-size: 3rem;
+                    }
+                    
+                }
+
+                .including{
+                    .dotted-list{
+                        li{
+                            @media (max-width: 511px) {
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+
                 .select {
                     button {
                         width: 12rem;
@@ -96,6 +121,8 @@
                         background-color: #fff;
                         color: map-get(variables.$color-palette-billcentrix, 'primary');
                         border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
+                    
+                        @include responsive-width(511px, 8rem);
                     }
                 }
                 

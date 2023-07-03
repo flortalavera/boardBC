@@ -10,8 +10,20 @@
     }
 }
 
-@mixin responsive-padding($max-width, $padding) {
+@mixin responsive-right($max-width, $right) {
     @media (max-width: $max-width) {
-        padding: $padding;
+        right: $right;
+    }
+}
+
+@mixin responsive-left($max-width, $left) {
+    @media (max-width: $max-width) {
+        left: $left;
+    }
+}
+
+@mixin responsive-font-size($max-width, $font-size) {
+    @media (max-width: $max-width) {
+        font-size: $font-size;
     }
 }

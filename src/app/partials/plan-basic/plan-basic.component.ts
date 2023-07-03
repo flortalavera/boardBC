@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-plan-basic',
@@ -9,6 +9,8 @@ export class PlanBasicComponent {
   plans: any[] = [];
   currentIndex = 0;
   visiblePlans: any[] = [];
+  showTwoElements = false;
+  showOneElement = false;
 
   ngOnInit() {
 
@@ -22,11 +24,18 @@ export class PlanBasicComponent {
     this.updateVisiblePlans();
   }
 
+  
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: Event) {
+    this.showTwoElements = window.innerWidth <= 1255;
+    this.showOneElement = window.innerWidth <= 925;
+    this.updateVisiblePlans();
+  }
+
   previous() {
     if (this.currentIndex > 0) {
-      if (this.currentIndex >= 3) {
-        this.currentIndex -= 3;
-      } else {
+      this.currentIndex -= this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3);
+      if (this.currentIndex < 0) {
         this.currentIndex = 0;
       }
       this.updateVisiblePlans();
@@ -34,10 +43,10 @@ export class PlanBasicComponent {
   }
 
   next() {
-    if (this.currentIndex < this.plans.length - 3) {
-      this.currentIndex += 3;
-      if (this.currentIndex >= this.plans.length - 3) {
-        this.currentIndex = this.plans.length - 3;
+    if (this.currentIndex < this.plans.length - (this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3))) {
+      this.currentIndex += this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3);
+      if (this.currentIndex >= this.plans.length - (this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3))) {
+        this.currentIndex = this.plans.length - (this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3));
       }
     }
     this.updateVisiblePlans();
@@ -45,7 +54,7 @@ export class PlanBasicComponent {
 
   updateVisiblePlans() {
     const start = this.currentIndex;
-    const end = start + 3;
+    const end = start + (this.showOneElement ? 1 : (this.showTwoElements ? 2 : 3));
     this.visiblePlans = this.plans.slice(start, end);
   }
 

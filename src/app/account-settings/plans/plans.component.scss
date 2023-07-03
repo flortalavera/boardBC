@@ -3,6 +3,7 @@
 @use '../../design-system/_base';
 @use '../../design-system/_plan-base';
 @use '../../design-system/_mobile-styles';
+@import '../../design-system/_mixins.scss';
 
 .plans-data {
     margin-top: 1rem;
@@ -51,22 +52,14 @@
         color: map-get(variables.$color-palette-billcentrix, 'primary');
         width: 15rem;
 
-        @media (max-width: 1077px){
-            width: 25rem;
-        }
+        @include responsive-width(1077px, 25rem);
 
-        
         @media (max-width: 678px){
             padding: 1rem 0;
         }
 
-        @media (max-width: 497px){
-            width: 20rem;
-        }
-
-        @media (max-width: 438px){
-            width: 17rem;
-        }
+        @include responsive-width(497px, 20rem);
+        @include responsive-width(438px, 17rem);
 
         strong {
             margin-bottom: 1.5rem;
@@ -205,13 +198,8 @@
             width: 100%;
             margin-top: 0;
 
-            @media (max-width: 1077px){
-                width: 20rem;
-            }
-
-            @media (max-width: 444px){
-                width: 100%;
-            }
+            @include responsive-width(1077px, 20rem);
+            @include responsive-width(444px, 100%);
 
             .see-photo {
                 width: 100%;

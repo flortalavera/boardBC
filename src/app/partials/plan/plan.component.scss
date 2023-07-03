@@ -1,21 +1,14 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 @use '../../design-system/_plan-base';
+@import '../../design-system/_mixins.scss';
 
 .preview{
     width: 20rem;
 
-    @media (max-width: 1196px){
-        width: 18rem;
-    }
-
-    @media (max-width: 964px){
-        width: 16rem;
-    }
-
-    @media (max-width: 395px){
-        width: 18rem;
-    }
+    @include responsive-width(1196px, 18rem);
+    @include responsive-width(964px, 16rem);
+    @include responsive-width(395px, 18rem);
 
     .options {
         display: flex;

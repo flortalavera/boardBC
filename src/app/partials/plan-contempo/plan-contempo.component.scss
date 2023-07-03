@@ -13,8 +13,12 @@
     color: map-get(variables.$color-palette-billcentrix, 'primary');
     width: 100%;
 
-    @media (max-width: 473px) {
-        padding: 1.5rem;
+    @media (max-width: 547px) {
+        padding: 0 1.5rem 2.3rem;
+    }
+
+    @media (max-width: 472px) {
+        padding: 0 0 2.3rem;
     }
 
     h1 {
@@ -94,6 +98,7 @@
                 overflow: visible;
 
                 @include responsive-width(1036px, 14rem);
+                @include responsive-width(472px, 12rem);
 
                 @media (max-width: 1036px) {
                     margin-top: 3rem;
@@ -105,6 +110,10 @@
 
                     @media (max-width: 1036px) {
                         margin-bottom: 11rem;
+                    }
+
+                    @media (max-width: 472px) {
+                        margin-bottom: 9rem;
                     }
 
                     h1 {
@@ -123,6 +132,11 @@
                         @media (max-width: 1036px) {
                             width: 12rem;
                             height: 12rem;
+                        }
+
+                        @media (max-width: 472px) {
+                            width: 9rem;
+                            height: 9rem;
                         }
 
                         &.plan-1 {
@@ -188,9 +202,9 @@
                         color: map-get(variables.$color-palette-billcentrix, 'navy');
                         padding: 0;
 
-                        @media (max-width: 1036px) {
-                            font-size: 0.8rem;
-                        }
+                        @include responsive-font-size(1036px, 0.8rem);
+                        @include responsive-font-size(472px, 0.6rem);
+
                     }
                 }
 
