@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-plan-practical',
@@ -12,7 +12,11 @@ export class PlanPracticalComponent {
   showTwoElements = false;
   showOneElement = false;
 
+  @Input() selectedPalette: string = "Billcentrix";
+
   ngOnInit() {
+    console.log('paleta desde el partial: ' + this.selectedPalette)
+    
     this.plans = [
       { price: '$15', option: 'OPCIÓN 1' },
       { price: '$25', option: 'OPCIÓN 2' },

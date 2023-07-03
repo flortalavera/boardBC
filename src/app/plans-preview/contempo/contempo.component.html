@@ -5,10 +5,16 @@
         <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close">
     </div>
     <div class="main-content">
-        <div class="background">
+        <div [ngClass]="{
+            'background': selectedPalette === 'Billcentrix',
+            'background-modern': selectedPalette === 'Moderna',
+            'background-violet': selectedPalette === 'Violeta'
+          }">
             <div class="navbar">
                 <div class="logo">
-                    <img src="../../../assets/icons/imagen.png" alt="logo fotografia">
+                    <img *ngIf="selectedPalette === 'Billcentrix'" src="../../../assets/icons/imagen.png" alt="logo fotografia">
+                    <img *ngIf="selectedPalette === 'Moderna'" src="../../../assets/icons/imagen-gray.png" alt="logo fotografia">
+                    <img *ngIf="selectedPalette === 'Violeta'" src="../../../assets/icons/imagen-violet.png" alt="logo fotografia">
                     <h3>Logo</h3>
                 </div>
                 <div class="other-options-menu">
@@ -41,16 +47,24 @@
                 </div>
             </div>
         </div>
-        <div class="background2">
+        <div [ngClass]="{
+            'background2': selectedPalette === 'Billcentrix',
+            'background2-modern': selectedPalette === 'Moderna',
+            'background2-violet': selectedPalette === 'Violeta'
+          }">
             <div class="plans">
                 <h1>Título de planes</h1>
                 <p>PRECIOS</p>
                 <div>
-                    <app-plan-contempo></app-plan-contempo>
+                    <app-plan-contempo [selectedPalette]="selectedPalette"></app-plan-contempo>
                 </div>
             </div>
         </div>
-        <div class="banner-content">
+        <div [ngClass]="{
+            'banner-content': selectedPalette === 'Billcentrix',
+            'banner-content-modern': selectedPalette === 'Moderna',
+            'banner-content-violet': selectedPalette === 'Violeta'
+          }" >
             <div class="image">
                 <img src="../../../assets/images/botellasx3-Header.png" alt="imagen del banner">
             </div>
@@ -61,11 +75,17 @@
                     by the readable content of a page.</p>
             </div>
         </div>
-        <div class="footer">
+        <div [ngClass]="{
+            'footer': selectedPalette === 'Billcentrix',
+            'footer-modern': selectedPalette === 'Moderna',
+            'footer-violet': selectedPalette === 'Violeta'
+          }" >
             <h2>Texto en el pie de página</h2>
             <hr>
             <div class="mail">
-                <img src="../../../assets/icons/mail.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Billcentrix'" src="../../../assets/icons/mail.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Moderna'" src="../../../assets/icons/mail-green.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Violeta'" src="../../../assets/icons/mail-fucsia.png" alt="icono de mail">
                 <h2>Forma@<strong>decontacto.com</strong></h2>
             </div>
         </div>

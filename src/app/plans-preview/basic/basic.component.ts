@@ -8,12 +8,17 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./basic.component.scss']
 })
 export class BasicComponent {
-  selectedPalette: any;
+  selectedPalette: string = 'Billcentrix';
   
   constructor(
     private dialogRef: MatDialogRef<BasicComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
+
+  ngOnInit(): void {
+    // Imprimir la paleta seleccionada
+    console.log('Paleta seleccionada:', this.selectedPalette);
+  }
 
   onCloseModal(): void {
     this.dialogRef.close();

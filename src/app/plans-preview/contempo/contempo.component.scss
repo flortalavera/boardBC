@@ -6,7 +6,10 @@
 
 body {
     .main-content {
-        .background {
+
+        .background,
+        .background-modern,
+        .background-violet {
             height: 35rem;
             background-image: url('../../../assets/images/Slide\ Background.png');
             background-size: 80%;
@@ -169,7 +172,61 @@ body {
             }
         }
 
-        .background2 {
+        .background-modern {
+            background-image: url('../../../assets/images/Slide-Background-Modern.png');
+
+            .navbar {
+                h3 {
+                    color: map-get(variables.$color-palette-modern, 'gray2');
+                }
+
+            }
+
+            .main-image {
+                .text {
+                    h1 {
+                        color: map-get(variables.$color-palette-modern, 'success');
+                    }
+
+                    p{
+                        color: map-get(variables.$color-palette-modern, 'gray2');
+                    }
+
+                    button{
+                        background-color: map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+            }
+        }
+
+        .background-violet {
+            background-image: url('../../../assets/images/Slide-Background-Violet.png');
+
+            .navbar {
+                h3 {
+                    color: map-get(variables.$color-palette-violet, 'purple');
+                }
+
+            }
+
+            .main-image {
+                .text {
+                    h1 {
+                        color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+
+                    p{
+                        color: map-get(variables.$color-palette-violet, 'purple');
+                    }
+
+                    button{
+                        background-color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+                }
+            }
+        }
+
+        .background2, .background2-modern, .background2-violet {
             height: 55rem;
             background-image: url('../../../assets/images/Background\ Bubble.png');
             background-repeat: no-repeat;
@@ -224,7 +281,35 @@ body {
             }
         }
 
-        .banner-content {
+        .background2-modern{
+            background-image: url('../../../assets/images/Background-Bubble-Modern.png');
+
+            .plans{
+                h1{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-modern, 'navy');
+                }
+            }
+        }
+
+        .background2-violet{
+            background-image: url('../../../assets/images/Background-Bubble-Violet.png');
+
+            .plans{
+                h1{
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-violet, 'blush');
+                }
+            }
+        }
+
+        .banner-content, .banner-content-modern, .banner-content-violet {
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding: 0 10rem;
@@ -299,7 +384,31 @@ body {
             }
         }
 
-        .footer {
+        .banner-content-modern{
+            .text{
+                h1{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-modern, 'gray2');
+                }
+            }
+        }
+
+        .banner-content-violet{
+            .text{
+                h1{
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-violet, 'purple');
+                }
+            }
+        }
+
+        .footer, .footer-modern, .footer-violet {
             padding: 3rem;
 
             @media (max-width: 589px) {
@@ -363,6 +472,26 @@ body {
                 }
             }
 
+        }
+
+        .footer-modern{
+            h2 {
+                color: map-get(variables.$color-palette-modern, 'success');
+            }
+
+            hr {
+                background-color: map-get(variables.$color-palette-modern, 'success');
+            }
+        }
+
+        .footer-violet{
+            h2 {
+                color: map-get(variables.$color-palette-violet, 'fucsia');
+            }
+
+            hr {
+                background-color: map-get(variables.$color-palette-violet, 'fucsia');
+            }
         }
     }
 

@@ -3,7 +3,7 @@
 @use '../../design-system/_plan-base';
 @import '../../design-system/_mixins.scss';
 
-.plan-basic{
+.plan-basic {
     background-color: transparent;
     padding: 1.5rem 2.3rem;
     border-radius: 10px;
@@ -27,7 +27,9 @@
         color: map-get(variables.$color-palette-billcentrix, 'navy');
     }
 
-    .plan-basic-content {
+    .plan-basic-content,
+    .plan-basic-content-modern,
+    .plan-basic-content-violet {
         margin-top: 1rem;
         display: flex;
         justify-content: center;
@@ -88,22 +90,22 @@
 
             .preview {
 
-                .see-photo{
+                .see-photo {
                     @media (max-width: 511px) {
                         height: 6rem;
                     }
                 }
 
-                .big-number{
+                .big-number {
                     @media (max-width: 511px) {
                         font-size: 3rem;
                     }
-                    
+
                 }
 
-                .including{
-                    .dotted-list{
-                        li{
+                .including {
+                    .dotted-list {
+                        li {
                             @media (max-width: 511px) {
                                 font-size: 0.6rem;
                             }
@@ -121,14 +123,73 @@
                         background-color: #fff;
                         color: map-get(variables.$color-palette-billcentrix, 'primary');
                         border: 1px solid map-get(variables.$color-palette-billcentrix, 'primary');
-                    
+
                         @include responsive-width(511px, 8rem);
                     }
                 }
-                
+
                 .plans {
                     display: flex;
                     justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    .plan-basic-content-modern {
+        .carousel-container {
+            .preview {
+                .header{
+                    h1{
+                        color: map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+
+                .big-number, h3 {
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+
+                .select{
+                    button{
+                        color: map-get(variables.$color-palette-modern, 'success');
+                        border: 1px solid map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+            }
+        }
+    }
+
+    .plan-basic-content-violet {
+        .carousel-container {
+            .preview {
+                background-color: map-get(variables.$color-palette-violet, 'pink-back');
+                border: solid 6px #ffff;
+                border-radius: 15px;
+
+                .header{
+                    h1{
+                        color: map-get(variables.$color-palette-violet, 'ally');
+                    }
+                }
+
+                .see-photo{
+                    background-color: #ffff;
+                }
+
+                .big-number, h3 {
+                    color: map-get(variables.$color-palette-violet, 'ally');
+                }
+                
+
+                .option{
+                    color: map-get(variables.$color-palette-violet, 'blush');
+                }
+
+                .select{
+                    button{
+                        color: map-get(variables.$color-palette-violet, 'blush');
+                        border: 1px solid map-get(variables.$color-palette-violet, 'blush');
+                    }
                 }
             }
         }

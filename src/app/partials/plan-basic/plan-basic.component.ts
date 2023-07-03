@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-plan-basic',
@@ -12,7 +12,10 @@ export class PlanBasicComponent {
   showTwoElements = false;
   showOneElement = false;
 
+  @Input() selectedPalette: string = "Billcentrix";
+
   ngOnInit() {
+    console.log('paleta desde el partial: ' + this.selectedPalette)
 
     this.plans = [
       { title: 'Plan 1', option: 'Opción 1' },

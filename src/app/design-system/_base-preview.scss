@@ -41,7 +41,7 @@ body {
         }
     }
 
-    .main-content {
+    .main-content, .main-content-modern, .main-content-violet {
         
         @include responsive-width(1330px, 62rem);
         @include responsive-width(1267px, 60rem);

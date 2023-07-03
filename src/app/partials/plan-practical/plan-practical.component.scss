@@ -28,7 +28,7 @@
     }
 
 
-    .plan-practical-content {
+    .plan-practical-content, .plan-practical-content-modern, .plan-practical-content-violet {
         margin-top: 1rem;
         display: flex;
         justify-content: center;
@@ -140,6 +140,91 @@
 
                     p {
                         font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .plan-practical-content-modern {
+        .carousel-container {
+            .preview {
+                border: 1px solid map-get(variables.$color-palette-modern, 'success');
+
+                .header{
+                    p{
+                        color: map-get(variables.$color-palette-modern, 'success');
+                    }
+
+                    button {
+                        background-color: map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+
+                .big-number, h3 {
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+
+                .including{
+                    p{
+                        color: map-get(variables.$color-palette-modern, 'gray2');
+                    }
+                }
+
+                .select{
+                    p{
+                        color: map-get(variables.$color-palette-modern, 'success');
+                    }
+
+                    .round-checkbox input[type="checkbox"]{
+                        border: 1px solid map-get(variables.$color-palette-modern, 'success');
+                    }
+
+                    .round-checkbox input[type="checkbox"]:checked::before {
+                        background-color: map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+            }
+        }
+    }
+
+    .plan-practical-content-violet {
+        .carousel-container {
+            .preview {
+                border: 1px solid map-get(variables.$color-palette-violet, 'fucsia');
+                background-color: map-get(variables.$color-palette-violet, 'pink-back');
+
+                .header{
+                    p{
+                        color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+
+                    button {
+                        background-color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+                }
+
+                .big-number, h3 {
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+
+                .including{
+                    p{
+                        color: map-get(variables.$color-palette-violet, 'purple');
+                    }
+                }
+
+                .select{
+                    p{
+                        color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+
+                    .round-checkbox input[type="checkbox"]{
+                        border: 1px solid map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+
+                    .round-checkbox input[type="checkbox"]:checked::before {
+                        background-color: map-get(variables.$color-palette-violet, 'fucsia');
                     }
                 }
             }

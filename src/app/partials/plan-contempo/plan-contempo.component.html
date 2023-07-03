@@ -1,5 +1,9 @@
 <div class="plan-contempo">
-    <div class="plan-contempo-content">
+    <div [ngClass]="{
+        'plan-contempo-content': selectedPalette === 'Billcentrix',
+        'plan-contempo-content-modern': selectedPalette === 'Moderna',
+        'plan-contempo-content-violet': selectedPalette === 'Violeta'
+      }">
         <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
             <div class="arrow-left"></div>
         </div>

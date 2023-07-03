@@ -9,14 +9,14 @@ export class SliderComponent implements OnInit {
   palettes: any[] = [];
   currentIndex: number = 0;
   visiblePalettes: any[] = [];
-  selectedPalette: any;
+  selectedPalette: string = '';
 
   @Output() paletteSelected = new EventEmitter<any>();
 
   ngOnInit() {
 
     this.palettes = [
-      { image: '../../../assets/images/color-palette/billcentrix.png', title: 'Billcentrix' },
+      { image: '../../../assets/images/color-palette/billcentrix.png', title: 'Billcentrix', selected: true },
       { image: '../../../assets/images/color-palette/moderna.png', title: 'Moderna' },
       { image: '../../../assets/images/color-palette/violeta.png', title: 'Violeta' },
       { image: '../../../assets/images/color-palette/paleta4.png', title: 'Billcentrix' },

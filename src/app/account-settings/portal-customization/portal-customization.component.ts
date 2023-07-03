@@ -12,7 +12,7 @@ import { ContempoComponent } from 'src/app/plans-preview/contempo/contempo.compo
 })
 export class PortalCustomizationComponent {
   dialogRef!: MatDialogRef<PracticalComponent>;
-  selectedTheme: string = 'Contempo';
+  selectedTheme: string = 'Práctico';
   selectedPalette: any;
 
   constructor(

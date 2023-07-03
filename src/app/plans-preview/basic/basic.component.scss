@@ -6,7 +6,7 @@
 
 body {
 
-    .main-content {
+    .main-content, .main-content-modern, .main-content-violet {
         margin-top: 1rem;
         padding: 1rem;
         border-radius: 10px;
@@ -213,6 +213,81 @@ body {
                 }
             }
 
+        }
+    }
+
+    .main-content-modern{
+        h3{
+            color: map-get(variables.$color-palette-modern, 'navy');
+        }
+
+        .main-image {
+            background-color: map-get(variables.$color-palette-modern, 'success');
+        }
+
+        .plans{
+            p{
+                color: map-get(variables.$color-palette-modern, 'gray2');
+            }
+        }
+
+        .banner-content{
+            background-color: map-get(variables.$color-palette-modern, 'gray2');
+            
+            .text{
+                h1, p{
+                    color: #fff;
+                }
+            }
+        }
+
+        .footer{
+            h2{
+                color: map-get(variables.$color-palette-modern, 'success');
+            }
+
+            hr{
+                background-color: map-get(variables.$color-palette-modern, 'success');
+            }
+            
+        }
+    }
+
+    .main-content-violet{
+        h3{
+            color: map-get(variables.$color-palette-modern, 'navy');
+        }
+
+        .main-image {
+            background-color: map-get(variables.$color-palette-violet, 'purple');
+        }
+
+        .plans{
+            p{
+                color: map-get(variables.$color-palette-violet, 'fucsia');
+                background-color: map-get(variables.$color-palette-violet, 'pink-back');
+            }
+        }
+
+        .banner-content{
+            background-color: map-get(variables.$color-palette-violet, 'fucsia');
+            
+            .text{
+                h1, p{
+                    color: #fff;
+                }
+            }
+        }
+
+        .footer{
+            h2{
+                color: map-get(variables.$color-palette-violet, 'ally');
+            }
+
+            hr{
+                background-color: map-get(variables.$color-palette-violet, 'ally');
+            }
+            
         }
     }
 

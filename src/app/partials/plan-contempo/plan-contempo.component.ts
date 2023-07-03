@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-plan-contempo',
@@ -12,7 +12,7 @@ export class PlanContempoComponent implements OnInit {
   showTwoElements = false;
   showOneElement = false;
 
-  selectedPalette: any;
+  @Input() selectedPalette: string = "Billcentrix";
 
   ngOnInit() {
 

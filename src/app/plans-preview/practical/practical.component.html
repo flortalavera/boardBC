@@ -2,19 +2,33 @@
     <div class="header">
         <img src="../../../assets/icons/ver.png" alt="icono vista previa">
         <p>Vista previa</p>
-        <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close" >
+        <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close">
     </div>
-    <div class="main-content">
+    <div [ngClass]="{
+        'main-content': selectedPalette === 'Billcentrix',
+        'main-content-modern': selectedPalette === 'Moderna',
+        'main-content-violet': selectedPalette === 'Violeta'
+      }">
         <div class="navbar">
             <div class="logo">
-                <img src="../../../assets/icons/imagen.png" alt="logo fotografia">
+                <img *ngIf="selectedPalette === 'Billcentrix'" src="../../../assets/icons/imagen.png" alt="logo fotografia">
+                <img *ngIf="selectedPalette === 'Moderna'" src="../../../assets/icons/imagen-modern.png" alt="logo fotografia">
+                <img *ngIf="selectedPalette === 'Violeta'" src="../../../assets/icons/imagen-purple.png" alt="logo fotografia">
                 <h3>Logo</h3>
             </div>
             <div class="other-options-menu">
-                <a href=""><h3>Inicio</h3></a>
-                <a href=""><h3>Precios</h3></a>
-                <a href=""><h3>Beneficios</h3></a>
-                <a href=""><h3>Contacto</h3></a>
+                <a href="">
+                    <h3>Inicio</h3>
+                </a>
+                <a href="">
+                    <h3>Precios</h3>
+                </a>
+                <a href="">
+                    <h3>Beneficios</h3>
+                </a>
+                <a href="">
+                    <h3>Contacto</h3>
+                </a>
             </div>
             <div class="burguer-menu">
                 <app-menu-preview></app-menu-preview>
@@ -30,7 +44,7 @@
         <div class="plans">
             <h1>Título de planes</h1>
             <p>PRECIOS</p>
-            <app-plan-practical></app-plan-practical>
+            <app-plan-practical [selectedPalette]="selectedPalette"></app-plan-practical>
         </div>
         <div class="background-banner">
             <div class="banner-content">
@@ -39,7 +53,9 @@
                     <p>Descripción del banner</p>
                 </div>
                 <div class="white-image">
-                    <img src="../../../assets/icons/imagen.png" alt="imagen del banner">
+                    <img *ngIf="selectedPalette === 'Billcentrix'" src="../../../assets/icons/imagen.png" alt="imagen del banner">
+                    <img *ngIf="selectedPalette === 'Moderna'" src="../../../assets/icons/imagen-modern.png" alt="imagen del banner">
+                    <img *ngIf="selectedPalette === 'Violeta'" src="../../../assets/icons/imagen-fucsia.png" alt="imagen del banner">
                     <p>Imagen</p>
                 </div>
             </div>
@@ -57,7 +73,8 @@
                     <p>info@product.com</p>
                 </div>
                 <div class="text-footer">
-                    <p>Términos de uso</p><p>Política de privacidad</p>
+                    <p>Términos de uso</p>
+                    <p>Política de privacidad</p>
                 </div>
             </div>
         </div>

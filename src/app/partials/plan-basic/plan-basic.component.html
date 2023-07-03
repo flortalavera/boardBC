@@ -1,5 +1,9 @@
 <div class="plan-basic">
-    <div class="plan-basic-content">
+    <div [ngClass]="{
+        'plan-basic-content': selectedPalette === 'Billcentrix',
+        'plan-basic-content-modern': selectedPalette === 'Moderna',
+        'plan-basic-content-violet': selectedPalette === 'Violeta'
+      }">
         <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
             <div class="arrow-left"></div>
         </div>
@@ -9,7 +13,7 @@
                     <h1>{{ plan.title }}</h1>
                 </div>
                 <div class="see-photo"></div>
-                <h3>{{ plan.option }}</h3>
+                <h3 class="option">{{ plan.option }}</h3>
                 <h1 class="big-number">$0</h1>
                 <h3>Mensuales</h3>
                 <div class="including">

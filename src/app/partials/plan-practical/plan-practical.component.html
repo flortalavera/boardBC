@@ -1,5 +1,9 @@
 <div class="plan-practical">
-    <div class="plan-practical-content">
+    <div [ngClass]="{
+        'plan-practical-content': selectedPalette === 'Billcentrix',
+        'plan-practical-content-modern': selectedPalette === 'Moderna',
+        'plan-practical-content-violet': selectedPalette === 'Violeta'
+      }">
         <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
             <div class="arrow-left"></div>
         </div>

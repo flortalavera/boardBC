@@ -122,8 +122,8 @@ body {
                     padding: 2rem 0 5rem 0;
                     justify-content: space-around;
 
-                    @include responsive-height(1282px 32rem);
-                    @include responsive-height(1219px 30rem);
+                    @include responsive-height(1282px, 32rem);
+                    @include responsive-height(1219px, 30rem);
 
                     @media (max-width: 920px) {
                         width: 90%;
@@ -131,12 +131,12 @@ body {
                         padding: 0 0 3rem 0;
                     }
 
-                    @include responsive-height(905px 28rem);
-                    @include responsive-height(897px 26rem);
-                    @include responsive-height(841px 23rem);
-                    @include responsive-height(757px 22rem);
-                    @include responsive-height(639px 21rem);
-                    @include responsive-height(550px 15rem);
+                    @include responsive-height(905px, 28rem);
+                    @include responsive-height(897px, 26rem);
+                    @include responsive-height(841px, 23rem);
+                    @include responsive-height(757px, 22rem);
+                    @include responsive-height(639px, 21rem);
+                    @include responsive-height(550px, 15rem);
 
                     @media (max-width: 489px) {
                         height: 11.5rem;
@@ -154,9 +154,9 @@ body {
                         margin-top: 2rem;
                     }
 
-                    @include responsive-height(1340px 35rem);
-                    @include responsive-height(1305px 37rem);
-                    @include responsive-height(1282px 33rem);
+                    @include responsive-height(1340px, 35rem);
+                    @include responsive-height(1305px, 37rem);
+                    @include responsive-height(1282px, 33rem);
 
                     @media (max-width: 921px) {
                         height: 37rem;
@@ -167,10 +167,10 @@ body {
                         margin-bottom: 3rem;
                     }
 
-                    @include responsive-height(841px 29rem);
-                    @include responsive-height(609px 28rem);
-                    @include responsive-height(550px 22rem);
-                    @include responsive-height(489px 17rem);
+                    @include responsive-height(841px, 29rem);
+                    @include responsive-height(609px, 28rem);
+                    @include responsive-height(550px, 22rem);
+                    @include responsive-height(489px, 17rem);
 
                     @media (max-width: 418px) {
                         height: 18rem;
@@ -187,7 +187,7 @@ body {
                         margin-bottom: 2rem;
                     }
 
-                    @include responsive-height(973px 19rem);
+                    @include responsive-height(973px, 19rem);
 
                     @media (max-width: 943px) {
                         margin-bottom: 4rem;
@@ -198,18 +198,18 @@ body {
                         margin-bottom: 1rem;
                     }
 
-                    @include responsive-height(921px 20rem);
-                    @include responsive-height(905px 17rem);
-                    @include responsive-height(841px 15rem);
-                    @include responsive-height(737px 20rem);
+                    @include responsive-height(921px, 20rem);
+                    @include responsive-height(905px, 17rem);
+                    @include responsive-height(841px, 15rem);
+                    @include responsive-height(737px, 20rem);
 
                     @media (max-width: 657px) {
                         height: 15rem;
                         margin-bottom: 2rem;
                     }
 
-                    @include responsive-height(606px 12rem);
-                    @include responsive-height(578px 10rem);
+                    @include responsive-height(606px, 12rem);
+                    @include responsive-height(578px, 10rem);
 
                     @media (max-width: 454px) {
                         margin-bottom: 1rem;
@@ -287,7 +287,7 @@ body {
                         }
                     }
 
-                    @include responsive-width(418px 11.5rem);
+                    @include responsive-width(418px, 11.5rem);
 
                     .text {
                         width: 55%;
@@ -365,8 +365,8 @@ body {
                             top: 1rem;
                         }
 
-                        @include responsive-height(639px 80%);
-                        @include responsive-height(550px 65%);
+                        @include responsive-height(639px, 80%);
+                        @include responsive-height(550px, 65%);
 
                         @media (max-width: 489px) {
                             height: 70%;

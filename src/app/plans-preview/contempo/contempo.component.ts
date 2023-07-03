@@ -7,7 +7,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./contempo.component.scss']
 })
 export class ContempoComponent {
-  selectedPalette: any;
+  selectedPalette: string = 'Billcentrix';
 
   constructor(
     private dialogRef: MatDialogRef<ContempoComponent>,

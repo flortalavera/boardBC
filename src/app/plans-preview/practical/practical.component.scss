@@ -6,7 +6,7 @@
 
 body {
 
-    .main-content {
+    .main-content, .main-content-modern, .main-content-violet {
         margin-top: 1rem;
         border-radius: 10px;
         left: 0;
@@ -353,6 +353,175 @@ body {
 
         }
 
+    }
+
+    .main-content-modern{
+
+        .navbar{
+            .logo{
+                h3{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+            }
+
+            .other-options-menu{
+                a{
+                    h3{
+                        color: map-get(variables.$color-palette-modern, 'navy');
+                    }
+                }
+            }
+        }
+
+        .main-image {
+            background-color: map-get(variables.$color-palette-modern, 'success');
+
+            .text{
+                button{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+            }
+        }
+
+        .plans{
+            h1, p{
+                color: map-get(variables.$color-palette-modern, 'success');
+            }
+        }
+
+        .background-banner{
+            background-color: map-get(variables.$color-palette-modern, 'success');
+
+            .banner-content {
+                background-color: map-get(variables.$color-palette-modern, 'gray2');
+            }
+            
+            .text{
+                h1, p{
+                    color: #fff;
+                }
+            }
+
+            .white-image{
+                p{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+            }
+        }
+
+        .footer{
+            .left{
+                h1{
+                    color: map-get(variables.$color-palette-modern, 'success');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-modern, 'gray2');
+                }
+            }
+
+            .right{
+                .text-footer, .mail{
+                    p{
+                        color: map-get(variables.$color-palette-modern, 'gray2');
+                    }
+                }
+
+                .mail{
+                    .round-mail{
+                        background-color: map-get(variables.$color-palette-modern, 'success');
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .main-content-violet{
+
+        .navbar{
+            .logo{
+                h3{
+                    color: map-get(variables.$color-palette-violet, 'ally');
+                }
+            }
+
+            .other-options-menu{
+                a{
+                    h3{
+                        color: map-get(variables.$color-palette-violet, 'ally');
+                    }
+                }
+            }
+        }
+
+        .main-image {
+            background-color: map-get(variables.$color-palette-violet, 'purple');
+
+            .text{
+                button{
+                    background-color: #ffff;
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+            }
+        }
+
+        .plans{
+            h1{
+                color: map-get(variables.$color-palette-violet, 'fucsia');
+            }
+
+            p{
+                color: map-get(variables.$color-palette-violet, 'purple');
+            }
+        }
+
+        .background-banner{
+            background-color: map-get(variables.$color-palette-violet, 'fucsia');
+
+            .banner-content {
+                background-color: map-get(variables.$color-palette-violet, 'fucsia');
+            }
+            
+            .text{
+                h1, p{
+                    color: #fff;
+                }
+            }
+
+            .white-image{
+                p{
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+            }
+        }
+
+        .footer{
+            .left{
+                h1{
+                    color: map-get(variables.$color-palette-violet, 'fucsia');
+                }
+
+                p{
+                    color: map-get(variables.$color-palette-violet, 'purple');
+                }
+            }
+
+            .right{
+                .text-footer, .mail{
+                    p{
+                        color: map-get(variables.$color-palette-violet, 'purple');
+                    }
+                }
+
+                .mail{
+                    .round-mail{
+                        background-color: map-get(variables.$color-palette-violet, 'fucsia');
+                    }
+                }
+            }
+            
+        }
     }
 
     .options-buttons{

@@ -4,7 +4,11 @@
         <p>Vista previa</p>
         <img src="../../../assets/icons/cerrar.png" (click)="onCloseModal()" alt="cerrar el modal" class="close" >
     </div>
-    <div class="main-content">
+    <div [ngClass]="{
+        'main-content': selectedPalette === 'Billcentrix',
+        'main-content-modern': selectedPalette === 'Moderna',
+        'main-content-violet': selectedPalette === 'Violeta'
+      }">
         <h3>Logo</h3>
         <div class="main-image">
             <div class="text">
@@ -15,7 +19,7 @@
         </div>
         <div class="plans">
             <p>PRECIOS</p>
-            <app-plan-basic></app-plan-basic>
+            <app-plan-basic [selectedPalette]="selectedPalette"></app-plan-basic>
         </div>
         <div class="banner-content">
             <div class="text">
@@ -28,7 +32,9 @@
             <h2>Texto en el pie de página</h2>
             <hr>
             <div class="mail">
-                <img src="../../../assets/icons/mail.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Billcentrix'" src="../../../assets/icons/mail.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Moderna'" src="../../../assets/icons/mail-green.png" alt="icono de mail">
+                <img *ngIf="selectedPalette === 'Violeta'" src="../../../assets/icons/mail-violet.png" alt="icono de mail">
                 <h2>Forma@<strong>decontacto.com</strong></h2>
             </div>
         </div>
