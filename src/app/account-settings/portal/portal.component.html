@@ -5,7 +5,7 @@
                 <img src="../../assets/images/BRAND2.png" alt="logo de Billcentrix">
             </div>
             <div class="buttons">
-                <button id="createPlanBtn">Crear nuevo plan</button>
+                <button id="createPlanBtn" (click)="handleCreatePlanClick()">Crear nuevo plan</button>
                 <button class="create-plan-btn"><h1>+</h1></button>
                 <img src="../../../assets/icons/cubo-green.png" alt="icono portales">
                 <app-menu></app-menu>
@@ -31,7 +31,7 @@
                                 <p class="text-right">Vista previa</p>
                             </div>
                             <div class="round-checkbox">
-                                <input type="checkbox" id="myCheckbox">
+                                <input type="checkbox" id="checkboxBasic" name="checkboxBasic" [(ngModel)]="checkboxBasicValue" (change)="handleCheckboxChange('basic')">
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                     <p class="text-right">Vista previa</p>
                                 </div>
                                 <div class="round-checkbox">
-                                    <input type="checkbox" id="myCheckbox">
+                                    <input type="checkbox" id="checkboxPractical" name="checkboxPractical" [(ngModel)]="checkboxPracticalValue" (change)="handleCheckboxChange('practical')">
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                 <p class="text-right">Vista previa</p>
                             </div>
                             <div class="round-checkbox">
-                                <input type="checkbox" id="myCheckbox">
+                                <input type="checkbox" id="checkboxContempo" name="checkboxContempo" [(ngModel)]="checkboxContempoValue" (change)="handleCheckboxChange('contempo')">
                             </div>
                         </div>
                     </div>

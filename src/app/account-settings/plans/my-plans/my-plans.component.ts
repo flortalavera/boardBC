@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-plans',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MyPlansComponent {
 
+  constructor(private router: Router) { }
+
+  handleCreatePlanClick() {
+    this.router.navigateByUrl('/plans');
+  }
+  
 }
