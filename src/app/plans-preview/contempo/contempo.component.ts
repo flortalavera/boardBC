@@ -15,8 +15,9 @@ export class ContempoComponent {
   ) { }
 
   ngOnInit(): void {
-    // Imprimir la paleta seleccionada
-    console.log('Paleta seleccionada:', this.selectedPalette);
+    if (this.selectedPalette == undefined) {
+      this.selectedPalette = 'Billcentrix';
+    }
   }
 
   onCloseModal(): void {

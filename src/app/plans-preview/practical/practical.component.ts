@@ -8,11 +8,17 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class PracticalComponent {
   selectedPalette: any;
-  
+
   constructor(
     private dialogRef: MatDialogRef<PracticalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) { }
+
+  ngOnInit() {
+    if (this.selectedPalette == undefined) {
+      this.selectedPalette = 'Billcentrix';
+    }
+  }
 
   onCloseModal(): void {
     this.dialogRef.close();

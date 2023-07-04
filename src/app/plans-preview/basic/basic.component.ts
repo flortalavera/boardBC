@@ -9,15 +9,16 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class BasicComponent {
   selectedPalette: string = 'Billcentrix';
-  
+
   constructor(
     private dialogRef: MatDialogRef<BasicComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    // Imprimir la paleta seleccionada
-    console.log('Paleta seleccionada:', this.selectedPalette);
+    if (this.selectedPalette == undefined) {
+      this.selectedPalette = 'Billcentrix';
+    }
   }
 
   onCloseModal(): void {
